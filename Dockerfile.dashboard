@@ -8,7 +8,7 @@ FROM dependencies AS build
 COPY app ./app
 COPY public ./public
 COPY tests ./tests
-COPY eslint.config.mjs next-env.d.ts postcss.config.mjs tsconfig.json vinext.config.ts ./
+COPY eslint.config.mjs next.config.ts postcss.config.mjs tsconfig.json vite.config.ts ./
 RUN pnpm build
 
 FROM node:24-slim AS runtime
