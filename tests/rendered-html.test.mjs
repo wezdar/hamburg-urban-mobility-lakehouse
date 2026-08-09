@@ -19,10 +19,12 @@ test("server-renders the Hamburg mobility product", async () => {
   const html = await response.text();
   assert.match(html, /<title>ElbeFlow — Hamburg Urban Mobility Lakehouse<\/title>/i);
   assert.match(html, /Mobility,/);
-  assert.match(html, /Network pulse/);
+  assert.match(html, /Official data universe/);
+  assert.match(html, /StadtRAD live pulse/);
   assert.match(html, /Lakehouse architecture/);
   assert.match(html, /Hamburg Urban Data Platform/);
-  assert.match(html, /210\.1M\+/);
+  assert.match(html, /459\.0M\+/);
+  assert.match(html, /84,191/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
@@ -32,5 +34,7 @@ test("live endpoint always returns a usable payload", async () => {
   const payload = await response.json();
   assert.ok(payload.metrics.stations >= 300);
   assert.ok(payload.coverage.estimatedBackfillableRows >= 100_000_000);
+  assert.equal(payload.universe.totalStreams, 84_191);
+  assert.ok(payload.universe.verifiedSampleRows >= 100_000);
   assert.equal(payload.source.license, "DL-DE-BY-2.0");
 });

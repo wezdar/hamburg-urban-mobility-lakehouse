@@ -17,6 +17,23 @@ export type HistoryPoint = {
   observations: number;
 };
 
+export type MobilitySource = {
+  id: string;
+  name: string;
+  shortName: string;
+  domain: string;
+  streamCount: number;
+  coverageStart: string;
+  cadenceMinutes: number | null;
+  estimatedRows: number | null;
+  description: string;
+  color: string;
+  officialUrl: string;
+  apiRoot: string;
+  countVerifiedAt: string;
+  countStatus: "live" | "verified snapshot";
+};
+
 export type DashboardData = {
   generatedAt: string;
   source: {
@@ -37,6 +54,14 @@ export type DashboardData = {
     freshPercent: number;
     snapshotRows: number;
   };
+  universe: {
+    sourceCount: number;
+    totalStreams: number;
+    estimatedScheduledRows: number;
+    verifiedSampleRows: number;
+    earliestObservation: string;
+  };
+  catalog: MobilitySource[];
   stations: Station[];
   history: HistoryPoint[];
 };

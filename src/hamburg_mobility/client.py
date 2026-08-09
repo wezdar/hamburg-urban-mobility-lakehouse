@@ -87,10 +87,21 @@ class SensorThingsClient:
             payload = self.get_json(next_link)
 
     def bike_datastreams(self, *, include_latest: bool = False) -> list[dict[str, Any]]:
+        return self.datastreams(BIKE_FILTER, include_latest=include_latest)
+
+    def datastreams(
+        self,
+        filter_expression: str,
+        *,
+        include_latest: bool = False,
+        limit: int | None = None,
+        orderby: str = "@iot.id asc",
+    ) -> list[dict[str, Any]]:
+        """Return datastream metadata for any configured Hamburg feed."""
         params: dict[str, str | int] = {
-            "$filter": BIKE_FILTER,
-            "$top": 500,
-            "$orderby": "@iot.id asc",
+            "$filter": filter_expression,
+            "$top": min(limit or 500, 500),
+            "$orderby": orderby,
         }
         if include_latest:
             params["$expand"] = (
@@ -99,7 +110,27 @@ class SensorThingsClient:
             )
         else:
             params["$select"] = "@iot.id,name,phenomenonTime,properties"
-        return list(self.paginate("Datastreams", params))
+        streams = list(
+            self.paginate(
+                "Datastreams",
+                params,
+                max_pages=1 if limit is not None else None,
+            )
+        )
+        return streams[:limit] if limit is not None else streams
+
+    def datastream_count(self, filter_expression: str) -> int:
+        """Read the API's exact stream count without downloading the collection."""
+        payload = self.get_json(
+            "Datastreams",
+            {
+                "$filter": filter_expression,
+                "$count": "true",
+                "$top": 1,
+                "$select": "@iot.id",
+            },
+        )
+        return int(payload.get("@iot.count", len(payload.get("value", []))))
 
     def observations(
         self,

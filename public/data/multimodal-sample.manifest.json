@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-08-09T10:30:42.079351Z",
+  "format": "gzip-compressed newline-delimited JSON",
+  "license": "DL-DE-BY-2.0",
+  "rowCount": 102994,
+  "sourceRows": {
+    "traffic-lights": 28244,
+    "ev-charging": 4750,
+    "motor-traffic": 15000,
+    "cycle-counters": 25000,
+    "stadtrad": 30000
+  },
+  "sampledStreams": {
+    "traffic-lights": 20,
+    "ev-charging": 20,
+    "motor-traffic": 20,
+    "cycle-counters": 20,
+    "stadtrad": 20
+  },
+  "firstObservation": "2021-05-30T22:20:00Z/2021-05-30T22:24:59Z",
+  "lastObservation": "2026-08-09T21:59:59Z",
+  "compressedBytes": 1576901,
+  "sha256": "f75a79f1110d073f4ddfeacbd4913130038566efa4dd4a3fee5763b99dcb9f91"
+}

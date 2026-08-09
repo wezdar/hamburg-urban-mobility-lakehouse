@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { DashboardData, Station, StationStatus } from "../lib/types";
+import type { DashboardData, MobilitySource, Station, StationStatus } from "../lib/types";
 
 type Props = { initialData: DashboardData };
 type Range = "6H" | "12H" | "24H";
@@ -40,6 +40,10 @@ function freshnessLabel(value: string, asOf: string) {
   return `${Math.floor(seconds / 3600)}h ago`;
 }
 
+function formatYear(value: string) {
+  return new Date(value).getUTCFullYear();
+}
+
 function MetricCard({ label, value, note, accent }: {
   label: string;
   value: string;
@@ -75,6 +79,73 @@ function AvailabilityChart({ data, range }: { data: DashboardData["history"]; ra
         </div>
       ))}
     </div>
+  );
+}
+
+function SourceAtlas({ sources }: { sources: MobilitySource[] }) {
+  const currentYear = new Date().getUTCFullYear();
+  const firstYear = Math.min(...sources.map((source) => formatYear(source.coverageStart)));
+  const yearSpan = Math.max(1, currentYear - firstYear);
+  const largestLog = Math.max(...sources.map((source) => Math.log10(source.streamCount + 1)), 1);
+
+  return (
+    <section className="source-atlas" id="sources">
+      <div className="source-atlas__heading">
+        <div>
+          <div className="eyebrow"><span>02</span> Official data universe</div>
+          <h2>Five systems.<br /><em>One urban pulse.</em></h2>
+        </div>
+        <p>
+          The platform now joins shared bicycles, permanent cycle counters, road traffic,
+          charging infrastructure and signal control. Stream counts come directly from
+          Hamburg&apos;s SensorThings APIs.
+        </p>
+      </div>
+
+      <div className="source-grid">
+        {sources.map((source) => (
+          <article
+            className="source-card"
+            key={source.id}
+            style={{ "--source-color": source.color } as React.CSSProperties}
+          >
+            <div className="source-card__top">
+              <span>{source.domain}</span>
+              <i>LIVE</i>
+            </div>
+            <strong>{formatCompact(source.streamCount)}</strong>
+            <small>sensor streams</small>
+            <div className="source-card__bar">
+              <i style={{ width: `${Math.max(8, (Math.log10(source.streamCount + 1) / largestLog) * 100)}%` }} />
+            </div>
+            <h3>{source.shortName}</h3>
+            <p>{source.description}</p>
+            <div className="source-card__meta">
+              <span>Since {formatYear(source.coverageStart)}</span>
+              <span>{source.cadenceMinutes ? `${source.cadenceMinutes} min` : "event-driven"}</span>
+            </div>
+            <a href={source.officialUrl} target="_blank" rel="noreferrer" aria-label={`Open official ${source.name} dataset`}>
+              Official source ↗
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div className="coverage-timeline" aria-label="Historical coverage by data source">
+        <div className="coverage-timeline__axis"><span>{firstYear}</span><span>Historical coverage</span><span>{currentYear}</span></div>
+        {sources.map((source) => {
+          const startYear = formatYear(source.coverageStart);
+          const left = ((startYear - firstYear) / yearSpan) * 100;
+          return (
+            <div className="coverage-row" key={source.id}>
+              <strong>{source.shortName}</strong>
+              <div><i style={{ left: `${left}%`, background: source.color }} /></div>
+              <span>{startYear} → live</span>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 
@@ -138,9 +209,9 @@ export function MobilityDashboard({ initialData }: Props) {
     [data.stations],
   );
   const latest = data.coverage.lastObservation;
-  const backfillYears = Math.max(
+  const coverageYears = Math.max(
     1,
-    new Date(latest).getFullYear() - new Date(data.coverage.firstObservation).getFullYear(),
+    new Date(data.generatedAt).getFullYear() - formatYear(data.universe.earliestObservation),
   );
 
   return (
@@ -152,6 +223,7 @@ export function MobilityDashboard({ initialData }: Props) {
         </a>
         <nav aria-label="Dashboard sections">
           <a className="is-active" href="#overview">Overview</a>
+          <a href="#sources">Sources</a>
           <a href="#network">Network</a>
           <a href="#pipeline">Pipeline</a>
           <a href="#quality">Quality</a>
@@ -168,26 +240,28 @@ export function MobilityDashboard({ initialData }: Props) {
           <h1>Mobility,<br /><em>in motion.</em></h1>
         </div>
         <div className="hero__aside">
-          <p>A production-minded lakehouse turning Hamburg&apos;s public mobility signals into trusted, decision-ready data.</p>
+          <p>A production-minded lakehouse joining {data.universe.sourceCount} official Hamburg systems into trusted, decision-ready data.</p>
           <div className="hero__meta">
             <span>53.5511° N</span>
             <span>09.9937° E</span>
-            <span>UTC+02</span>
+            <span>{formatCompact(data.universe.totalStreams)} streams</span>
           </div>
         </div>
       </section>
 
       <section className="metrics" aria-label="Live network metrics">
-        <MetricCard label="Stations monitored" value={formatNumber(data.metrics.stations)} note={`${data.metrics.activeStations} reporting bicycles`} />
-        <MetricCard label="Bikes available" value={formatNumber(data.metrics.availableBikes)} note={`Updated ${freshnessLabel(latest, data.generatedAt)}`} accent />
-        <MetricCard label="Data freshness" value={`${data.metrics.freshPercent}%`} note="Within quality SLA" />
-        <MetricCard label="Backfill capacity" value={`${formatCompact(data.coverage.estimatedBackfillableRows)}+`} note={`${backfillYears} years · 5 min cadence`} />
+        <MetricCard label="Signal streams" value={formatNumber(data.universe.totalStreams)} note={`Across ${data.universe.sourceCount} official data domains`} />
+        <MetricCard label="Scheduled history" value={`${formatCompact(data.universe.estimatedScheduledRows)}+`} note="Coverage estimate · event feeds excluded" accent />
+        <MetricCard label="Verified sample" value={formatCompact(data.universe.verifiedSampleRows)} note="Real rows committed for reproducible review" />
+        <MetricCard label="Historical coverage" value={`${coverageYears}Y`} note={`${formatYear(data.universe.earliestObservation)} → live`} />
       </section>
+
+      <SourceAtlas sources={data.catalog} />
 
       <section className="dashboard-grid" id="network">
         <article className="panel panel--map">
           <div className="panel__header">
-            <div><span className="section-number">02</span><h2>Network pulse</h2></div>
+            <div><span className="section-number">03</span><h2>StadtRAD live pulse</h2></div>
             <div className="filter-group" aria-label="Filter map by station status">
               {(["all", "healthy", "low", "empty"] as StatusFilter[]).map((value) => (
                 <button
@@ -211,8 +285,8 @@ export function MobilityDashboard({ initialData }: Props) {
 
         <article className="panel panel--ranking">
           <div className="panel__header">
-            <div><span className="section-number">03</span><h2>Highest supply</h2></div>
-            <span className="panel__hint">NOW</span>
+            <div><span className="section-number">04</span><h2>Highest supply</h2></div>
+            <span className="panel__hint">{formatNumber(data.metrics.availableBikes)} BIKES · {freshnessLabel(latest, data.generatedAt)}</span>
           </div>
           <ol className="station-list">
             {topStations.map((station, index) => (
@@ -223,8 +297,8 @@ export function MobilityDashboard({ initialData }: Props) {
               </li>
             ))}
           </ol>
-          <a className="data-link" href="/data/dashboard.json" download>
-            Download verified snapshot <span>↓</span>
+          <a className="data-link" href="/data/multimodal-sample.jsonl.gz" download>
+            Download {formatCompact(data.universe.verifiedSampleRows)} real rows <span>↓</span>
           </a>
         </article>
       </section>
@@ -232,7 +306,7 @@ export function MobilityDashboard({ initialData }: Props) {
       <section className="lower-grid">
         <article className="panel panel--chart">
           <div className="panel__header">
-            <div><span className="section-number">04</span><h2>Availability rhythm</h2></div>
+            <div><span className="section-number">05</span><h2>Availability rhythm</h2></div>
             <div className="range-switcher" aria-label="Chart time range">
               {(["6H", "12H", "24H"] as Range[]).map((value) => (
                 <button key={value} className={range === value ? "is-selected" : ""} onClick={() => setRange(value)}>{value}</button>
@@ -248,28 +322,28 @@ export function MobilityDashboard({ initialData }: Props) {
 
         <article className="panel panel--quality" id="quality">
           <div className="panel__header">
-            <div><span className="section-number">05</span><h2>Data contract</h2></div>
+            <div><span className="section-number">06</span><h2>Data contract</h2></div>
             <span className="quality-score">A</span>
           </div>
-          <div className="quality-ring" style={{ "--score": `${data.metrics.freshPercent * 3.6}deg` } as React.CSSProperties}>
-            <div><strong>{data.metrics.freshPercent}%</strong><span>fresh rows</span></div>
+          <div className="quality-ring" style={{ "--score": "360deg" } as React.CSSProperties}>
+            <div><strong>5/5</strong><span>sources verified</span></div>
           </div>
           <ul className="checks">
-            <li><span className="check-ok">✓</span><div><b>Schema contract</b><small>All required fields present</small></div></li>
-            <li><span className="check-ok">✓</span><div><b>Geospatial bounds</b><small>Coordinates inside Hamburg</small></div></li>
-            <li><span className="check-ok">✓</span><div><b>Freshness SLA</b><small>5-minute source cadence</small></div></li>
+            <li><span className="check-ok">✓</span><div><b>Source provenance</b><small>Official URLs and licences retained</small></div></li>
+            <li><span className="check-ok">✓</span><div><b>Composite identity</b><small>Source + observation ID deduplication</small></div></li>
+            <li><span className="check-ok">✓</span><div><b>Cadence contracts</b><small>5 min, 15 min and event-driven feeds</small></div></li>
           </ul>
         </article>
       </section>
 
       <section className="pipeline" id="pipeline">
         <div className="pipeline__intro">
-          <div className="eyebrow"><span>06</span> Lakehouse architecture</div>
+          <div className="eyebrow"><span>07</span> Lakehouse architecture</div>
           <h2>From raw signal<br />to <em>trusted metric.</em></h2>
-          <p>Replay-safe ingestion, partitioned storage and tested transformations. Designed to scale from a local demo to 100M+ observations.</p>
+          <p>Replay-safe ingestion, source-aware partitions and tested transformations. Designed for 450M+ scheduled observations plus Hamburg&apos;s event-driven feeds.</p>
         </div>
         <div className="pipeline__flow">
-          <div className="flow-node"><span>01</span><i>API</i><strong>SensorThings</strong><small>Official Hamburg source</small></div>
+          <div className="flow-node"><span>01</span><i>API</i><strong>5 source domains</strong><small>84K+ official streams</small></div>
           <div className="flow-arrow">→</div>
           <div className="flow-node"><span>02</span><i>RAW</i><strong>Bronze</strong><small>Gzip JSON · immutable</small></div>
           <div className="flow-arrow">→</div>

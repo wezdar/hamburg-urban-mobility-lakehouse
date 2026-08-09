@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
   const title = "ElbeFlow — Hamburg Urban Mobility Lakehouse";
-  const description = "Live and historical mobility data from Hamburg's official Urban Data Platform.";
+  const description = "84,000+ official Hamburg mobility streams, 450M+ scheduled records and a reproducible multi-source lakehouse.";
   return {
     metadataBase: new URL(origin),
     title,
@@ -30,9 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       type: "website",
       url: origin,
-      images: [{ url: `${origin}/og.png`, width: 1734, height: 907, alt: "ElbeFlow Hamburg mobility network" }],
+      images: [{ url: `${origin}/og-multimodal.png`, width: 1734, height: 907, alt: "ElbeFlow multi-source Hamburg mobility network" }],
     },
-    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
+    twitter: { card: "summary_large_image", title, description, images: [`${origin}/og-multimodal.png`] },
   };
 }
 

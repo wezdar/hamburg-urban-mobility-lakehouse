@@ -10,6 +10,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+from .catalog import build_source_catalog
 from .client import SensorThingsClient
 
 SOURCE_URL = "https://suche.transparenz.hamburg.de/dataset/stadtrad-stationen-hamburg39"
@@ -103,7 +104,9 @@ def _hourly_history(observations: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def build_dashboard_snapshot(
     output: Path,
     *,
-    history_station_count: int = 16,
+    history_station_count: int = 64,
+    sample_manifest: Path | None = Path("public/data/multimodal-sample.manifest.json"),
+    refresh_catalog: bool = False,
     client: SensorThingsClient | None = None,
 ) -> dict[str, Any]:
     api = client or SensorThingsClient()
@@ -137,9 +140,25 @@ def build_dashboard_snapshot(
         max(0, math.floor((end - start).total_seconds() / 300))
         for start, end in bounds
     )
+    generated_at = datetime.now(UTC)
+    catalog = build_source_catalog(
+        generated_at=generated_at,
+        stadtrad_estimate=estimated_rows,
+        stream_counts={"stadtrad": len(streams)},
+        refresh_counts=refresh_catalog,
+    )
+    verified_sample_rows = 0
+    if sample_manifest and sample_manifest.exists():
+        manifest = json.loads(sample_manifest.read_text(encoding="utf-8"))
+        verified_sample_rows = int(manifest.get("rowCount", 0))
+    scheduled_estimate = sum(
+        int(source["estimatedRows"])
+        for source in catalog
+        if source["estimatedRows"] is not None
+    )
     fresh_stations = [station for station in stations if station["status"] != "stale"]
     result = {
-        "generatedAt": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
+        "generatedAt": generated_at.isoformat().replace("+00:00", "Z"),
         "source": {
             "name": "Hamburg Urban Data Platform — StadtRAD",
             "url": SOURCE_URL,
@@ -158,6 +177,14 @@ def build_dashboard_snapshot(
             "freshPercent": round(len(fresh_stations) / len(stations) * 100, 1),
             "snapshotRows": len(stations) + len(history_rows),
         },
+        "universe": {
+            "sourceCount": len(catalog),
+            "totalStreams": sum(int(source["streamCount"]) for source in catalog),
+            "estimatedScheduledRows": scheduled_estimate,
+            "verifiedSampleRows": verified_sample_rows,
+            "earliestObservation": min(source["coverageStart"] for source in catalog),
+        },
+        "catalog": catalog,
         "stations": stations,
         "history": _hourly_history(history_rows),
     }

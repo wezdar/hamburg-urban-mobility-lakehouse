@@ -6,7 +6,7 @@ import type { DashboardData } from "./lib/types";
 export const metadata: Metadata = {
   title: "ElbeFlow — Hamburg Urban Mobility Lakehouse",
   description:
-    "A live, production-minded data platform for Hamburg's public mobility network.",
+    "84,000+ official mobility streams across bikes, roads, charging and traffic control.",
 };
 
 export default function Home() {
