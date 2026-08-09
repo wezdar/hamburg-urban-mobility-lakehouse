@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_stadtrad_observations
+    description: Clean, deduplicated five-minute StadtRAD availability observations.
+    columns:
+      - name: observation_id
+        tests: [not_null, unique]
+      - name: datastream_id
+        tests: [not_null]
+      - name: observed_at
+        tests: [not_null]
+      - name: available_bikes
+        tests: [not_null]
+
+  - name: fct_station_availability_hourly
+    description: Hourly serving layer used by analytics and dashboard consumers.
+    columns:
+      - name: observed_hour
+        tests: [not_null]
+      - name: datastream_id
+        tests: [not_null]

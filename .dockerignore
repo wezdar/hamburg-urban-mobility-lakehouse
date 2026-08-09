@@ -1,0 +1,12 @@
+.git
+.github
+.next
+.vinext
+.wrangler
+node_modules
+data
+dist
+outputs
+work
+*.pyc
+__pycache__

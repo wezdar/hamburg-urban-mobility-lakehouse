@@ -1,0 +1,3745 @@
+{
+  "generatedAt": "2026-08-09T09:55:03.976381Z",
+  "source": {
+    "name": "Hamburg Urban Data Platform — StadtRAD",
+    "url": "https://suche.transparenz.hamburg.de/dataset/stadtrad-stationen-hamburg39",
+    "license": "DL-DE-BY-2.0"
+  },
+  "coverage": {
+    "firstObservation": "2019-07-26T09:00:43.213000Z",
+    "lastObservation": "2026-08-09T09:53:04.283753Z",
+    "cadenceMinutes": 5,
+    "estimatedBackfillableRows": 210118023
+  },
+  "metrics": {
+    "stations": 360,
+    "availableBikes": 3763,
+    "activeStations": 360,
+    "freshPercent": 71.1,
+    "snapshotRows": 4968
+  },
+  "stations": [
+    {
+      "id": 17301,
+      "name": "S Tiefstack / Ausschläger Allee",
+      "latitude": 53.5306,
+      "longitude": 10.06528,
+      "availableBikes": 25,
+      "observedAt": "2026-08-09T04:43:06.685726Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 17302,
+      "name": "Gertigstraße / Forsmannstraße",
+      "latitude": 53.58191,
+      "longitude": 10.01479,
+      "availableBikes": 77,
+      "observedAt": "2026-08-09T09:53:03.837703Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 17303,
+      "name": "Billwerder Billdeich / TSG Sportforum",
+      "latitude": 53.49638,
+      "longitude": 10.18305,
+      "availableBikes": 4,
+      "observedAt": "2026-08-08T18:43:03.832347Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 17304,
+      "name": "U Ochsenzoll / Langenhorner Chaussee",
+      "latitude": 53.6789,
+      "longitude": 10.00073,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T15:53:05.996414Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 17305,
+      "name": "Veritaskai / Theodor-Yorck-Straße",
+      "latitude": 53.4659,
+      "longitude": 9.98923,
+      "availableBikes": 36,
+      "observedAt": "2026-08-09T09:18:01.55854Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 17306,
+      "name": "Soltaustraße / Arnoldistieg",
+      "latitude": 53.48241,
+      "longitude": 10.22167,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T20:58:02.53521Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 17307,
+      "name": "Modering / Oldesloer Straße",
+      "latitude": 53.63721,
+      "longitude": 9.92189,
+      "availableBikes": 19,
+      "observedAt": "2026-08-08T20:53:03.483738Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 17309,
+      "name": "Heilwigstraße / St. Benedictstraße",
+      "latitude": 53.58286,
+      "longitude": 9.99376,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T09:33:05.818295Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 17410,
+      "name": "Baakenallee / Lola-Rogge-Platz",
+      "latitude": 53.53775,
+      "longitude": 10.01205,
+      "availableBikes": 18,
+      "observedAt": "2026-08-09T09:38:03.383413Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 17413,
+      "name": "S Alte Wöhr / Rübenkamp",
+      "latitude": 53.59734,
+      "longitude": 10.03608,
+      "availableBikes": 57,
+      "observedAt": "2026-08-09T09:53:03.638374Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 17415,
+      "name": "S Kornweg / Tornberg",
+      "latitude": 53.63244,
+      "longitude": 10.05487,
+      "availableBikes": 3,
+      "observedAt": "2026-08-08T16:58:04.081431Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 17416,
+      "name": "U Joachim-Mähl-Straße / Paul-Sorge-Straße",
+      "latitude": 53.62884,
+      "longitude": 9.95002,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T08:38:02.585576Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 17422,
+      "name": "Wohldorfer Damm / Bergstedter Markt",
+      "latitude": 53.67133,
+      "longitude": 10.12406,
+      "availableBikes": 10,
+      "observedAt": "2026-08-08T22:53:02.744163Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 17444,
+      "name": "Saseler Markt / Stadtbahnstraße",
+      "latitude": 53.65371,
+      "longitude": 10.11079,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T08:48:02.322646Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 17451,
+      "name": "S Rissen / Gudrunstraße",
+      "latitude": 53.5823,
+      "longitude": 9.7585,
+      "availableBikes": 8,
+      "observedAt": "2026-08-08T15:48:05.450608Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 17454,
+      "name": "Hermann-Blohm-Straße / Am Elbtunnel",
+      "latitude": 53.54137,
+      "longitude": 9.96672,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T09:48:07.072114Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 17457,
+      "name": "Strandweg / Fähre Blankenese",
+      "latitude": 53.55701,
+      "longitude": 9.80376,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T08:33:03.853386Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 17458,
+      "name": "Lübeck",
+      "latitude": 53.568394,
+      "longitude": 9.990678,
+      "availableBikes": 1,
+      "observedAt": "2025-05-21T14:56:00.875755Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 17545,
+      "name": "Rothenbaumchaussee / Binderstraße",
+      "latitude": 53.56811,
+      "longitude": 9.98857,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:23:05.077364Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 17549,
+      "name": "Baakenhöft / Baakenhafenbrücke",
+      "latitude": 53.53856,
+      "longitude": 10.00817,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T07:08:06.928241Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 17554,
+      "name": "Behrmannplatz / Grelckstraße",
+      "latitude": 53.5994,
+      "longitude": 9.95871,
+      "availableBikes": 17,
+      "observedAt": "2026-08-09T09:53:04.166382Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 17555,
+      "name": "Adolf-Köster-Damm / Felix-Jud-Ring",
+      "latitude": 53.48537,
+      "longitude": 10.14676,
+      "availableBikes": 22,
+      "observedAt": "2026-08-09T02:58:03.784619Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 17588,
+      "name": "Alphonsstraße / Asklepios Klinik Wandsbek",
+      "latitude": 53.56986,
+      "longitude": 10.09051,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:43:03.647275Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 17589,
+      "name": "Jütlandring / Asklepios Klinik Nord-Ochsenzoll",
+      "latitude": 53.67278,
+      "longitude": 10.00387,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T07:33:02.291116Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 17590,
+      "name": "Im Fischbeker Heidbrook / Apfelbeerenring",
+      "latitude": 53.46629,
+      "longitude": 9.81063,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T07:53:04.885562Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 17593,
+      "name": "Heegbarg / Alstertal-Einkaufszentrum",
+      "latitude": 53.65394,
+      "longitude": 10.09221,
+      "availableBikes": 8,
+      "observedAt": "2026-08-08T15:38:04.692643Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 18111,
+      "name": "Langenhorner Chaussee / Oehleckerring",
+      "latitude": 53.66006,
+      "longitude": 10.00315,
+      "availableBikes": 21,
+      "observedAt": "2026-08-09T08:28:02.978545Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 18212,
+      "name": "Ehestorfer Weg / Triftstraße",
+      "latitude": 53.45521,
+      "longitude": 9.94652,
+      "availableBikes": 1,
+      "observedAt": "2026-08-06T11:18:02.858023Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 18329,
+      "name": "Randersweide / Kampweg",
+      "latitude": 53.47645,
+      "longitude": 10.19621,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:23:05.609514Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 18390,
+      "name": "S Neuwiedenthal / Striepenweg",
+      "latitude": 53.47371,
+      "longitude": 9.87714,
+      "availableBikes": 3,
+      "observedAt": "2026-08-08T23:43:03.448873Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 18407,
+      "name": "S Hochkamp / Reichskanzlerstraße",
+      "latitude": 53.56138,
+      "longitude": 9.84306,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T16:58:03.71961Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 18408,
+      "name": "Ernst-Bergeest-Weg / Binnenfeld",
+      "latitude": 53.44144,
+      "longitude": 9.95867,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T13:53:04.74163Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 18410,
+      "name": "S Diebsteich / Plöner Straße",
+      "latitude": 53.56687,
+      "longitude": 9.93474,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:48:07.848865Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 18413,
+      "name": "Bundesstraße / Universität",
+      "latitude": 53.56701,
+      "longitude": 9.97721,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T07:18:01.324499Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 20271,
+      "name": "Müggenburger Hauptdeich / Aurubis Werk-Ost",
+      "latitude": 53.51528,
+      "longitude": 10.03463,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T04:13:03.957184Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 20431,
+      "name": "S Poppenbüttel / Stormarnplatz",
+      "latitude": 53.65147,
+      "longitude": 10.09567,
+      "availableBikes": 1,
+      "observedAt": "2026-08-07T20:23:02.418786Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 20432,
+      "name": "Erdkampsweg / Hummelsbütteler Landstraße",
+      "latitude": 53.6278,
+      "longitude": 10.0252,
+      "availableBikes": 32,
+      "observedAt": "2026-08-09T07:58:02.503396Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 20438,
+      "name": "Nienstedtener Marktplatz / Nienstedtener Straße",
+      "latitude": 53.55446,
+      "longitude": 9.8447,
+      "availableBikes": 11,
+      "observedAt": "2026-08-09T08:38:02.303569Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 20439,
+      "name": "Tangstedter Landstraße / Asklepios Klinik Nord",
+      "latitude": 53.67546,
+      "longitude": 10.02849,
+      "availableBikes": 18,
+      "observedAt": "2026-08-09T03:53:02.082431Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 20442,
+      "name": "Zum Wachtelkönig / Zaunwickenweg",
+      "latitude": 53.47797,
+      "longitude": 9.84878,
+      "availableBikes": 8,
+      "observedAt": "2026-08-05T17:05:01.21705Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 20443,
+      "name": "S Ottensen / Thomasstraße",
+      "latitude": 53.56001,
+      "longitude": 9.92658,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:38:03.064577Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 20575,
+      "name": "Mobility Hub Hamburg-Harburg / Hannoversche Str.",
+      "latitude": 53.456305,
+      "longitude": 9.98988,
+      "availableBikes": 20,
+      "observedAt": "2026-08-09T09:13:05.519632Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 20576,
+      "name": "Alsterkrugchaussee / Preetzer Straße",
+      "latitude": 53.63262,
+      "longitude": 10.01516,
+      "availableBikes": 15,
+      "observedAt": "2026-08-09T09:18:01.365421Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 20577,
+      "name": "Tarpenbekstraße / Ernst-Thälmann-Platz",
+      "latitude": 53.59529,
+      "longitude": 9.98439,
+      "availableBikes": 20,
+      "observedAt": "2026-08-09T09:53:03.273633Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 20952,
+      "name": "Hainholzweg / Strucksbarg",
+      "latitude": 53.44985,
+      "longitude": 9.93735,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T11:23:03.336599Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 20953,
+      "name": "Gyula-Trebitsch-Platz / Kaskadenpark",
+      "latitude": 53.58128,
+      "longitude": 10.13295,
+      "availableBikes": 31,
+      "observedAt": "2026-08-09T09:18:01.326722Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 20968,
+      "name": "Carl-Petersen-Straße / Stoeckhardtstraße",
+      "latitude": 53.5577,
+      "longitude": 10.05033,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T08:53:01.396313Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 20989,
+      "name": "Überseeallee / Magdeburger Brücke",
+      "latitude": 53.54086,
+      "longitude": 10.00001,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:53:03.345906Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 20991,
+      "name": "U Kiwittsmoor / Fibiger Str.",
+      "latitude": 53.675043,
+      "longitude": 10.016993,
+      "availableBikes": 2,
+      "observedAt": "2026-08-07T19:43:07.760566Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 20992,
+      "name": "S Mittlerer Landweg / Am Gleisdreieck",
+      "latitude": 53.49718,
+      "longitude": 10.13173,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:38:03.968303Z",
+      "status": "low",
+      "region": "south"
+    },
+    {
+      "id": 25540,
+      "name": "U Fuhlsbüttel-Nord / Flughafenstr.",
+      "latitude": 53.640098,
+      "longitude": 10.017443,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T06:28:03.435364Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25554,
+      "name": "Volksparkstadion / Uwe-Seeler-Allee",
+      "latitude": 53.58746,
+      "longitude": 9.90389000000003,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:43:02.667047Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25555,
+      "name": "Fähranleger Finkenwerder/ Butendeichsweg",
+      "latitude": 53.5362,
+      "longitude": 9.87775000000003,
+      "availableBikes": 35,
+      "observedAt": "2026-08-08T21:28:02.198259Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25556,
+      "name": "S+U Sternschanze / Dänenweg",
+      "latitude": 53.564227,
+      "longitude": 9.96925,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:18:01.300043Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25557,
+      "name": "S Bahrenfeld / Friedensallee",
+      "latitude": 53.56026,
+      "longitude": 9.908946,
+      "availableBikes": 10,
+      "observedAt": "2026-03-31T17:26:02.122395Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25558,
+      "name": "Kurt-Schumacher-Allee / Nagelsweg",
+      "latitude": 53.5517,
+      "longitude": 10.016,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T21:58:01.399675Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25559,
+      "name": "Lohbrügger Markt / Ludwig-Rosenberg-Ring",
+      "latitude": 53.494675,
+      "longitude": 10.206894,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T08:53:00.835878Z",
+      "status": "low",
+      "region": "south"
+    },
+    {
+      "id": 25560,
+      "name": "Bramfelder Straße / Pfenningsbusch",
+      "latitude": 53.58272,
+      "longitude": 10.0465900000001,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T08:58:03.316969Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25561,
+      "name": "Hauptbahnhof / Heidi-Kabel-Platz",
+      "latitude": 53.554307,
+      "longitude": 10.007652,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:48:06.917455Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25562,
+      "name": "Bahrenfelder Straße / Völckersstraße",
+      "latitude": 53.556897,
+      "longitude": 9.927945,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:53:03.270557Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25563,
+      "name": "U Horner Rennbahn / Rennbahnstraße",
+      "latitude": 53.554193,
+      "longitude": 10.085077,
+      "availableBikes": 68,
+      "observedAt": "2026-08-09T09:28:02.731387Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25564,
+      "name": "U St. Pauli / Millerntorplatz",
+      "latitude": 53.551,
+      "longitude": 9.97033,
+      "availableBikes": 17,
+      "observedAt": "2026-08-09T09:48:06.945939Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25565,
+      "name": "Notkestraße / DESY Hörsaal",
+      "latitude": 53.574537,
+      "longitude": 9.878527,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T15:38:04.751841Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25566,
+      "name": "Lerchenfeld / Uferstraße",
+      "latitude": 53.567,
+      "longitude": 10.0318,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:13:04.727984Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25567,
+      "name": "Axel-Springer-Platz / Wexstraße",
+      "latitude": 53.55216,
+      "longitude": 9.98614,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T08:03:05.297084Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25568,
+      "name": "Glindersweg / Bethesda-Krankenhaus",
+      "latitude": 53.48653,
+      "longitude": 10.2346600000002,
+      "availableBikes": 1,
+      "observedAt": "2026-08-07T06:18:03.379Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25569,
+      "name": "S Nettelnburg / Friedrich-Frank-Bogen",
+      "latitude": 53.488482,
+      "longitude": 10.182199,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:03:01.076307Z",
+      "status": "low",
+      "region": "south"
+    },
+    {
+      "id": 25570,
+      "name": "Hovestraße / Aurubis",
+      "latitude": 53.52191,
+      "longitude": 10.03293,
+      "availableBikes": 21,
+      "observedAt": "2026-08-09T05:58:01.159483Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25571,
+      "name": "Groß-Sand / Wilhelmsburger Krankenhaus",
+      "latitude": 53.50387,
+      "longitude": 9.985615,
+      "availableBikes": 48,
+      "observedAt": "2026-08-09T09:23:04.830569Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25572,
+      "name": "Weidestraße / Johannes-Prassek-Park",
+      "latitude": 53.5808087,
+      "longitude": 10.0258479,
+      "availableBikes": 17,
+      "observedAt": "2026-08-09T09:48:07.038434Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25573,
+      "name": "Borsteler Chaussee / Köppenstraße",
+      "latitude": 53.60744,
+      "longitude": 9.97863000000005,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T08:23:04.032189Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25574,
+      "name": "Alsterdorfer Markt / Evangelische Stiftung",
+      "latitude": 53.6120909,
+      "longitude": 10.0239462,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:38:03.11884Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 25575,
+      "name": "U Hagendeel / Hinter der Lieth",
+      "latitude": 53.60347,
+      "longitude": 9.94496,
+      "availableBikes": 13,
+      "observedAt": "2026-08-09T09:48:07.057646Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25576,
+      "name": "U Saarlandstraße / Wiesendamm",
+      "latitude": 53.588735,
+      "longitude": 10.03268,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:43:02.847562Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25577,
+      "name": "Fischbeker Heidbrook / Quartiersmitte",
+      "latitude": 53.46503,
+      "longitude": 9.81492000000002,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T10:13:03.362878Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25578,
+      "name": "Billstedter Platz / Öjendorfer Weg",
+      "latitude": 53.540096,
+      "longitude": 10.106106,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T08:13:02.685053Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25579,
+      "name": "U Wandsbek Markt / Wandsbeker Marktstraße",
+      "latitude": 53.572433,
+      "longitude": 10.068955,
+      "availableBikes": 40,
+      "observedAt": "2026-08-09T08:48:01.388604Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25580,
+      "name": "Kleine Rosenstraße / Gerhart-Hauptmann-Platz",
+      "latitude": 53.5516,
+      "longitude": 9.99843,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:43:02.862852Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25581,
+      "name": "U Wandsbek Markt / Schlossgarten",
+      "latitude": 53.571664,
+      "longitude": 10.068644,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:48:07.078647Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25582,
+      "name": "Elbchaussee / Teufelsbrück",
+      "latitude": 53.547425,
+      "longitude": 9.862013,
+      "availableBikes": 17,
+      "observedAt": "2026-08-09T09:38:03.160998Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25583,
+      "name": "Bahrenfelder Chaussee / Von-Sauer-Straße",
+      "latitude": 53.5659729,
+      "longitude": 9.9108696,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:33:05.424214Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25584,
+      "name": "S+U Ohlsdorf / Alsterdorfer Straße",
+      "latitude": 53.62,
+      "longitude": 10.032,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T09:03:01.130632Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 25585,
+      "name": "Troplowitzstraße / Beiersdorf  / NXP",
+      "latitude": 53.582793,
+      "longitude": 9.957594,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:43:02.875231Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25586,
+      "name": "Langenfelder Damm / Müggenkampstraße",
+      "latitude": 53.580757,
+      "longitude": 9.938418,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:48:07.092075Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25587,
+      "name": "Goebenstraße / Eppendorfer Weg",
+      "latitude": 53.577579,
+      "longitude": 9.963063,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T09:48:07.099001Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25588,
+      "name": "S Königstraße / Struenseestraße",
+      "latitude": 53.5471,
+      "longitude": 9.94241,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T06:53:05.252183Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25589,
+      "name": "Eißendorfer Pferdeweg / Asklepios-Klinik Harburg",
+      "latitude": 53.459,
+      "longitude": 9.951,
+      "availableBikes": 1,
+      "observedAt": "2026-08-07T12:23:04.127383Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25590,
+      "name": "Allende-Platz / Grindelhof",
+      "latitude": 53.567845,
+      "longitude": 9.982728,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T09:48:07.106647Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25591,
+      "name": "Domstraße / Willy-Brandt-Straße",
+      "latitude": 53.547486,
+      "longitude": 9.994057,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T08:53:01.024068Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25592,
+      "name": "Fabriciusstraße / Buschrosenweg",
+      "latitude": 53.60142,
+      "longitude": 10.0626500000001,
+      "availableBikes": 21,
+      "observedAt": "2026-08-09T09:23:04.906156Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25593,
+      "name": "Von-Essen-Straße / Dehnhaide",
+      "latitude": 53.5785899999999,
+      "longitude": 10.0460700000001,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T08:03:04.570991Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25594,
+      "name": "Göhlbachtal / Berufliche Schule Harburg",
+      "latitude": 53.45452,
+      "longitude": 9.96541,
+      "availableBikes": 3,
+      "observedAt": "2026-08-08T19:28:01.696248Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25595,
+      "name": "S Langenfelde / Försterweg",
+      "latitude": 53.57965,
+      "longitude": 9.93238000000004,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:48:07.120331Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25596,
+      "name": "Mariannenruhplatz / Eva-Rühmkorf-Straße",
+      "latitude": 53.5615299999999,
+      "longitude": 9.93930000000004,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:38:03.190747Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25597,
+      "name": "AKN + S Eidelstedt / Reichsbahnstrtaße",
+      "latitude": 53.59666,
+      "longitude": 9.90608000000003,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T21:33:02.657187Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25598,
+      "name": "Borsteler Chaussee / Alphapark",
+      "latitude": 53.60524,
+      "longitude": 9.98267000000005,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T08:48:01.448335Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25599,
+      "name": "S+U Elbbrücken / Versmannstraße",
+      "latitude": 53.53493,
+      "longitude": 10.02422,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T21:43:02.200679Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25600,
+      "name": "Barsbütteler Straße / Öjendorfer Damm",
+      "latitude": 53.5708,
+      "longitude": 10.1360700000001,
+      "availableBikes": 13,
+      "observedAt": "2026-03-31T01:41:01.327173Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25601,
+      "name": "Bahnhof Rahlstedt / Helmut-Steidl-Platz",
+      "latitude": 53.60431,
+      "longitude": 10.15455,
+      "availableBikes": 36,
+      "observedAt": "2026-08-08T19:28:01.710993Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25602,
+      "name": "U Wandsbek-Gartenstadt / Ostpreußenplatz",
+      "latitude": 53.59206,
+      "longitude": 10.0756600000001,
+      "availableBikes": 24,
+      "observedAt": "2026-08-09T09:43:02.921066Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25603,
+      "name": "Tonndorfer Hauptstraße / Sonnenweg",
+      "latitude": 53.5864,
+      "longitude": 10.1249400000001,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:43:02.924181Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25604,
+      "name": "Bahnhof Dammtor / Theodor-Heuss-Platz",
+      "latitude": 53.5614,
+      "longitude": 9.99043,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:43:02.927257Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25605,
+      "name": "Bahnhof Dammtor / Dag-Hammarskjöld-Platz",
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "availableBikes": 30,
+      "observedAt": "2026-08-09T09:48:07.147104Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25606,
+      "name": "Bahnhof Bergedorf / Johann-Meyer-Straße",
+      "latitude": 53.490496,
+      "longitude": 10.206105,
+      "availableBikes": 55,
+      "observedAt": "2026-08-09T09:28:02.932677Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25607,
+      "name": "Bahnhof Altona Ost / Max-Brauer-Allee",
+      "latitude": 53.552121,
+      "longitude": 9.936005,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T11:28:01.335449Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25608,
+      "name": "Winterlindenweg / Loki-Schmidt-Platz",
+      "latitude": 53.6049799999999,
+      "longitude": 10.0300700000001,
+      "availableBikes": 16,
+      "observedAt": "2026-08-09T09:48:07.153389Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25609,
+      "name": "Winterhuder Weg / Zimmerstraße",
+      "latitude": 53.575308,
+      "longitude": 10.02045,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:43:02.94287Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25610,
+      "name": "Werner-Otto-Straße / OTTO Group",
+      "latitude": 53.60026,
+      "longitude": 10.070397,
+      "availableBikes": 18,
+      "observedAt": "2026-08-09T02:13:03.184826Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25611,
+      "name": "Wentorfer Straße / Bezirksamt Bergedorf",
+      "latitude": 53.487427,
+      "longitude": 10.22,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T07:48:01.746047Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25612,
+      "name": "Weidestraße / Biedermannplatz",
+      "latitude": 53.5800038,
+      "longitude": 10.033846,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:48:07.166624Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25613,
+      "name": "Veringstraße / Mannesallee",
+      "latitude": 53.514265,
+      "longitude": 9.987298,
+      "availableBikes": 27,
+      "observedAt": "2026-08-09T09:43:02.959032Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25614,
+      "name": "Van-der-Smissen-Straße / Große Elbstraße",
+      "latitude": 53.543906,
+      "longitude": 9.94246,
+      "availableBikes": 13,
+      "observedAt": "2026-08-09T09:38:03.240974Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25615,
+      "name": "Ursula-Falke-Terrassen / Mengestraße",
+      "latitude": 53.499748,
+      "longitude": 9.99647,
+      "availableBikes": 15,
+      "observedAt": "2026-08-09T08:03:04.636246Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25616,
+      "name": "Universität der Bundeswehr / Rodigallee",
+      "latitude": 53.57055,
+      "longitude": 10.1049300000001,
+      "availableBikes": 14,
+      "observedAt": "2026-08-09T09:43:02.968506Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25617,
+      "name": "Universität / Schlüterstraße",
+      "latitude": 53.566972,
+      "longitude": 9.986076,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T09:48:07.185915Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25618,
+      "name": "Universität / Moorweidenstraße",
+      "latitude": 53.563755,
+      "longitude": 9.987659,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T08:03:04.645463Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25619,
+      "name": "Uferstraße / Wagnerstraße",
+      "latitude": 53.571078,
+      "longitude": 10.039741,
+      "availableBikes": 19,
+      "observedAt": "2026-08-09T09:53:03.546336Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25620,
+      "name": "Überseering / Mexikoring",
+      "latitude": 53.601619,
+      "longitude": 10.024745,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:38:03.263188Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25621,
+      "name": "U Wartenau / Lübecker Straße",
+      "latitude": 53.5636,
+      "longitude": 10.0341,
+      "availableBikes": 17,
+      "observedAt": "2026-08-09T09:28:02.984648Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25622,
+      "name": "U Rauhes Haus / Horner Weg",
+      "latitude": 53.555503,
+      "longitude": 10.066926,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:03:01.246876Z",
+      "status": "low",
+      "region": "east"
+    },
+    {
+      "id": 25623,
+      "name": "U Oldenfelde / Busbrookhöhe",
+      "latitude": 53.61838,
+      "longitude": 10.12624,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T13:43:05.064472Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25624,
+      "name": "U Hudtwalckerstraße / Bebelallee",
+      "latitude": 53.5943,
+      "longitude": 9.99575,
+      "availableBikes": 36,
+      "observedAt": "2026-08-09T09:48:07.219472Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25625,
+      "name": "U Gänsemarkt / Caffamacherreihe",
+      "latitude": 53.555722,
+      "longitude": 9.984209,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T08:53:01.133054Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25626,
+      "name": "U Eppendorfer Baum / Isestraße",
+      "latitude": 53.5832,
+      "longitude": 9.98441,
+      "availableBikes": 23,
+      "observedAt": "2026-08-09T09:28:03.008805Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25627,
+      "name": "U Emilienstraße / Fruchtallee",
+      "latitude": 53.57169,
+      "longitude": 9.953138,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T06:23:04.961664Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25628,
+      "name": "U Dehnhaide / Barmbeker Markt",
+      "latitude": 53.579981,
+      "longitude": 10.041461,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T08:53:01.142528Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25629,
+      "name": "U Christuskirche / Fruchtallee",
+      "latitude": 53.5695,
+      "longitude": 9.96309,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:13:04.94475Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25630,
+      "name": "Süderfeldstraße / Universitätsklinikum Eppendorf",
+      "latitude": 53.594,
+      "longitude": 9.973,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T09:43:03.022106Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25631,
+      "name": "St. Petersburger Straße / Bei den Kirchhöfen",
+      "latitude": 53.559762,
+      "longitude": 9.981839,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T20:43:02.904719Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25632,
+      "name": "Stockmeyerstraße / Am Lohsepark",
+      "latitude": 53.54398,
+      "longitude": 10.0036700000001,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T09:28:03.027292Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25633,
+      "name": "U Straßburger Straße / Nordschleswiger Straße",
+      "latitude": 53.58182,
+      "longitude": 10.06811,
+      "availableBikes": 39,
+      "observedAt": "2026-08-09T09:38:03.322251Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25634,
+      "name": "U Steinstraße / Deichtorplatz",
+      "latitude": 53.548561,
+      "longitude": 10.004368,
+      "availableBikes": 14,
+      "observedAt": "2026-08-09T05:38:01.665659Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25635,
+      "name": "U Schlump / Gustav-Falke-Straße",
+      "latitude": 53.567991,
+      "longitude": 9.969601,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:03:01.302016Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25636,
+      "name": "U Schippelsweg / Paul-Sorge-Straße",
+      "latitude": 53.6347586678009,
+      "longitude": 9.95261914148799,
+      "availableBikes": 23,
+      "observedAt": "2026-08-08T16:53:02.808934Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25637,
+      "name": "U Ritterstraße / Wandsbeker Chaussee",
+      "latitude": 53.567126,
+      "longitude": 10.044484,
+      "availableBikes": 24,
+      "observedAt": "2026-08-09T09:53:03.611373Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25638,
+      "name": "Kuehnstraße / Albert-Schweitzer-Ring",
+      "latitude": 53.57784,
+      "longitude": 10.1179500000001,
+      "availableBikes": 4,
+      "observedAt": "2026-08-08T23:23:04.260763Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25639,
+      "name": "U Niendorf Markt / Tibarg",
+      "latitude": 53.6190722,
+      "longitude": 9.9513113,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:48:07.269438Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 25640,
+      "name": "U Mümmelmannsberg / Kandinskyallee",
+      "latitude": 53.52839,
+      "longitude": 10.15012,
+      "availableBikes": 1,
+      "observedAt": "2026-08-06T18:48:01.163583Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25641,
+      "name": "U Messehallen / Marktstraße",
+      "latitude": 53.558518,
+      "longitude": 9.975346,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T09:53:03.622123Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25642,
+      "name": "U Lohmühlenstraße / Steindamm",
+      "latitude": 53.5572,
+      "longitude": 10.0199,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:48:07.282154Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25643,
+      "name": "U Legienstraße / Riedweg",
+      "latitude": 53.547643,
+      "longitude": 10.095515,
+      "availableBikes": 16,
+      "observedAt": "2026-08-09T06:13:05.236621Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25644,
+      "name": "U Klosterstern / Eppendorfer Baum",
+      "latitude": 53.5820093,
+      "longitude": 9.987613,
+      "availableBikes": 41,
+      "observedAt": "2026-08-09T09:53:03.635283Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25645,
+      "name": "Rothenburgsorter Marktplatz / Lindleystraße",
+      "latitude": 53.534288,
+      "longitude": 10.038938,
+      "availableBikes": 29,
+      "observedAt": "2026-08-09T08:33:03.615162Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25646,
+      "name": "Liebigstraße / Wöhlerstraße",
+      "latitude": 53.53511,
+      "longitude": 10.08186,
+      "availableBikes": 18,
+      "observedAt": "2026-08-08T19:58:02.284198Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25647,
+      "name": "Liebigstraße / Berzeliusstraße",
+      "latitude": 53.53083,
+      "longitude": 10.1062,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T06:18:07.331575Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25648,
+      "name": "U Sengelmannstraße / Djakartaweg",
+      "latitude": 53.609163,
+      "longitude": 10.022685,
+      "availableBikes": 5,
+      "observedAt": "2026-08-08T10:48:05.408004Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25649,
+      "name": "U Lattenkamp / Bebelallee",
+      "latitude": 53.599203,
+      "longitude": 9.994017,
+      "availableBikes": 11,
+      "observedAt": "2026-08-09T09:53:03.660291Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25650,
+      "name": "Kümmellstraße / Robert-Koch-Straße",
+      "latitude": 53.590237,
+      "longitude": 9.98673,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:38:03.377072Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25651,
+      "name": "Jarrestraße / Rambatzweg",
+      "latitude": 53.584,
+      "longitude": 10.0211,
+      "availableBikes": 33,
+      "observedAt": "2026-08-09T09:38:03.380443Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25652,
+      "name": "Lortzingstraße / Friedrichsberger Straße",
+      "latitude": 53.573588,
+      "longitude": 10.049568,
+      "availableBikes": 24,
+      "observedAt": "2026-08-09T09:53:03.673064Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25653,
+      "name": "Paulinenplatz / Wohlwillstraße",
+      "latitude": 53.5542,
+      "longitude": 9.96246,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:53:03.676469Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25654,
+      "name": "U Überseequartier / Grasbrookpark",
+      "latitude": 53.54022,
+      "longitude": 9.99653,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:48:07.330203Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25655,
+      "name": "U Niendorf-Nord / Nordalbingerweg",
+      "latitude": 53.6408352,
+      "longitude": 9.9500955,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T09:33:05.714858Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 25656,
+      "name": "S Allermöhe / Walter-Rudolphi-Weg",
+      "latitude": 53.490126,
+      "longitude": 10.158515,
+      "availableBikes": 18,
+      "observedAt": "2026-08-09T09:43:03.114647Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25657,
+      "name": "U Kellinghusenstraße / Loogeplatz",
+      "latitude": 53.588516,
+      "longitude": 9.99112500000006,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:48:07.343074Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25658,
+      "name": "Sievekingplatz / Gorch-Fock-Wall",
+      "latitude": 53.556061,
+      "longitude": 9.979697,
+      "availableBikes": 14,
+      "observedAt": "2026-08-09T09:03:01.422157Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25659,
+      "name": "Siemersplatz / Kollaustraße",
+      "latitude": 53.600072,
+      "longitude": 9.963929,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:38:03.411448Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25660,
+      "name": "Schleidenstraße / Osterbekstraße",
+      "latitude": 53.584582,
+      "longitude": 10.03369,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:48:07.356393Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25661,
+      "name": "Sandweg / Sophienallee",
+      "latitude": 53.569769,
+      "longitude": 9.94977,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:53:03.707181Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25662,
+      "name": "S+U Ohlsdorf / Im Grünen Grunde",
+      "latitude": 53.62093,
+      "longitude": 10.0307400000001,
+      "availableBikes": 31,
+      "observedAt": "2026-08-09T09:48:07.362757Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 25663,
+      "name": "S+U Landungsbrücken / Johannisbollwerk",
+      "latitude": 53.5452501,
+      "longitude": 9.9736853,
+      "availableBikes": 21,
+      "observedAt": "2026-08-09T09:48:07.366349Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25664,
+      "name": "S Wilhelmsburg / Wilhelm-Strauß-Weg",
+      "latitude": 53.497933,
+      "longitude": 10.007016,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T06:18:07.387693Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25665,
+      "name": "S Wellingsbüttel / Rolfinckstraße",
+      "latitude": 53.64029,
+      "longitude": 10.0839200000001,
+      "availableBikes": 7,
+      "observedAt": "2026-08-08T18:58:03.889245Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25666,
+      "name": "S Stadthausbrücke / Neuer Wall",
+      "latitude": 53.549672,
+      "longitude": 9.986594,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:43:03.149287Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25667,
+      "name": "S Klein Flottbek / Ohnhorststraße",
+      "latitude": 53.558587,
+      "longitude": 9.86216,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T19:53:03.760171Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25668,
+      "name": "S Holstenstraße / Düppelstraße",
+      "latitude": 53.563037,
+      "longitude": 9.948345,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:33:05.765213Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25669,
+      "name": "S Harburg Rathaus / Deichhausweg",
+      "latitude": 53.4599586,
+      "longitude": 9.9804731,
+      "availableBikes": 23,
+      "observedAt": "2026-08-09T08:28:03.328297Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25670,
+      "name": "S Hammerbrook / Sachsenfeld",
+      "latitude": 53.546011,
+      "longitude": 10.024042,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T08:38:02.745138Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25671,
+      "name": "S Elbgaustraße / Weidplan",
+      "latitude": 53.60287,
+      "longitude": 9.89346,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T22:43:02.234108Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25672,
+      "name": "Röntgenstraße / Philips",
+      "latitude": 53.6234809,
+      "longitude": 10.0122088,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:13:05.084326Z",
+      "status": "low",
+      "region": "north"
+    },
+    {
+      "id": 25673,
+      "name": "Reeseberg / Anzengruberstraße",
+      "latitude": 53.44896,
+      "longitude": 9.990306,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T08:18:03.648908Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25674,
+      "name": "Paul-Ehrlich-Straße / Asklepios Klinik Altona",
+      "latitude": 53.554433,
+      "longitude": 9.900752,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:38:03.455348Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25675,
+      "name": "Osterstraße / Bismarckstraße",
+      "latitude": 53.573183,
+      "longitude": 9.962395,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T09:43:03.176841Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25676,
+      "name": "Neumühlen / Övelgönne",
+      "latitude": 53.544302,
+      "longitude": 9.914731,
+      "availableBikes": 15,
+      "observedAt": "2026-08-09T09:43:03.179987Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25677,
+      "name": "Neuländer Kamp / Eurofins",
+      "latitude": 53.4616513,
+      "longitude": 10.0041327,
+      "availableBikes": 3,
+      "observedAt": "2026-08-07T15:43:01.655095Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25678,
+      "name": "U Alsterdorf / Otto-Wels-Straße",
+      "latitude": 53.606177,
+      "longitude": 10.012225,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:33:05.782429Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25679,
+      "name": "Martinistraße / Haupteingang Klinikum",
+      "latitude": 53.588918,
+      "longitude": 9.975715,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:18:01.80363Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25680,
+      "name": "Luruper Chauseee / Ebertallee",
+      "latitude": 53.57347,
+      "longitude": 9.89281,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T19:58:02.394682Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25681,
+      "name": "Löwenstraße / Eppendorfer Weg",
+      "latitude": 53.583795,
+      "longitude": 9.977916,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T09:48:07.41913Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25682,
+      "name": "S Iserbrook / Heidrehmen",
+      "latitude": 53.57581,
+      "longitude": 9.81522000000002,
+      "availableBikes": 13,
+      "observedAt": "2026-08-09T08:38:02.777385Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25683,
+      "name": "Oberhafenquartier Nord / Oberhafenbrücke",
+      "latitude": 53.5443799999999,
+      "longitude": 10.0068600000001,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T23:13:04.855963Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25684,
+      "name": "Hellbrookkamp / Novomind AG",
+      "latitude": 53.59699852,
+      "longitude": 10.062488,
+      "availableBikes": 19,
+      "observedAt": "2026-08-09T09:48:07.42664Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25685,
+      "name": "Hauptbahnhof / Glockengießerwall",
+      "latitude": 53.553676,
+      "longitude": 10.004553,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:43:03.207699Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25686,
+      "name": "Hamburg Airport / Terminal 1",
+      "latitude": 53.63433,
+      "longitude": 10.00606,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:13:05.123447Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 25687,
+      "name": "Georg-Wilhelm-Straße / Mankiewicz",
+      "latitude": 53.494,
+      "longitude": 9.99,
+      "availableBikes": 19,
+      "observedAt": "2026-08-08T22:23:04.742611Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25688,
+      "name": "Fuhlsbüttler Straße / Hellbrookstraße",
+      "latitude": 53.59168,
+      "longitude": 10.043976,
+      "availableBikes": 42,
+      "observedAt": "2026-08-09T09:53:03.787961Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25689,
+      "name": "Fuhlsbüttler Straße / Hartzloh",
+      "latitude": 53.601,
+      "longitude": 10.041,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T09:28:03.230645Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25690,
+      "name": "Friedrich-Ebert-Damm / Lomerstraße",
+      "latitude": 53.584919,
+      "longitude": 10.079638,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T09:53:03.794108Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25691,
+      "name": "Friedrich-Ebert-Damm / Helbingtwiete",
+      "latitude": 53.588172,
+      "longitude": 10.095665,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T08:58:03.841999Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25692,
+      "name": "Friedrich-Ebert-Damm / Charlie-Mills-Straße",
+      "latitude": 53.59145,
+      "longitude": 10.106858,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:48:07.45507Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25693,
+      "name": "Fischmarkt / Breite Straße",
+      "latitude": 53.5462,
+      "longitude": 9.95088,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T09:38:03.513578Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25694,
+      "name": "Felicitas-Kukuck-Straße / Lille Torv",
+      "latitude": 53.55941,
+      "longitude": 9.93758,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:28:03.247942Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25695,
+      "name": "Fanny-Lewald-Ring",
+      "latitude": 53.47882,
+      "longitude": 10.1692600000001,
+      "availableBikes": 14,
+      "observedAt": "2026-08-08T14:38:06.378048Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25696,
+      "name": "U Langenhorn Markt / Tangstedter Landstraße",
+      "latitude": 53.6487572,
+      "longitude": 10.0163663,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T16:43:05.176042Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25697,
+      "name": "Fähre Rüschpark / Hein-Saß-Weg",
+      "latitude": 53.53956,
+      "longitude": 9.86297000000003,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T19:43:02.64567Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25698,
+      "name": "Planetarium / Otto-Wels-Straße",
+      "latitude": 53.59595,
+      "longitude": 10.01365,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:23:05.721586Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25699,
+      "name": "Goldbekplatz / Semperstraße",
+      "latitude": 53.5838,
+      "longitude": 10.01,
+      "availableBikes": 74,
+      "observedAt": "2026-08-09T09:53:03.822451Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25700,
+      "name": "Borgweg / Stadtpark",
+      "latitude": 53.592022,
+      "longitude": 10.015021,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T21:43:02.537071Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25701,
+      "name": "Überseering / New-York-Ring",
+      "latitude": 53.60373,
+      "longitude": 10.0197,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T19:18:01.967067Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25702,
+      "name": "U Habichtstraße / Steilshooper Straße",
+      "latitude": 53.593726,
+      "longitude": 10.0506397,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T08:28:03.427299Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25703,
+      "name": "S+U Barmbek / Wiesendamm",
+      "latitude": 53.586958,
+      "longitude": 10.042993,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:28:03.276992Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25704,
+      "name": "U Mundsburg / Schürbeker Straße",
+      "latitude": 53.5696,
+      "longitude": 10.0271,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:53:03.843813Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25705,
+      "name": "S+U Barmbek / Piazzetta-Ralph-Giordano",
+      "latitude": 53.5878083,
+      "longitude": 10.0461978,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:43:03.278078Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25706,
+      "name": "Mundsburger Brücke / Papenhuder Straße",
+      "latitude": 53.565952,
+      "longitude": 10.019142,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T09:43:03.281241Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25707,
+      "name": "Hofweg / Am Langenzug",
+      "latitude": 53.578035,
+      "longitude": 10.013995,
+      "availableBikes": 40,
+      "observedAt": "2026-08-09T09:53:03.853373Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25708,
+      "name": "U Hamburger Straße / Wagnerstraße",
+      "latitude": 53.574518,
+      "longitude": 10.036608,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T08:43:03.970639Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25709,
+      "name": "Bartholomäusstraße / Beim Alten Schützenhof",
+      "latitude": 53.575652,
+      "longitude": 10.02957,
+      "availableBikes": 13,
+      "observedAt": "2026-08-09T09:48:07.515107Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25710,
+      "name": "U Alter Teichweg / Nordschleswiger Straße",
+      "latitude": 53.585813,
+      "longitude": 10.06523,
+      "availableBikes": 22,
+      "observedAt": "2026-08-09T09:53:03.863848Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25711,
+      "name": "Eulenkamp / Straßburger Stieg",
+      "latitude": 53.5835399999999,
+      "longitude": 10.0717700000001,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:48:07.521396Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25712,
+      "name": "Elsässer Straße / Stormarner Straße",
+      "latitude": 53.5792899999999,
+      "longitude": 10.0642300000001,
+      "availableBikes": 15,
+      "observedAt": "2026-08-09T09:03:01.663792Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25713,
+      "name": "S Landwehr / Ramazan-Avci-Platz",
+      "latitude": 53.561109,
+      "longitude": 10.037022,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:48:07.530723Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25714,
+      "name": "Lübecker Straße / Marienkrankenhaus",
+      "latitude": 53.5597,
+      "longitude": 10.0285,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T22:38:03.708297Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25715,
+      "name": "U Trabrennbahn / Traberweg",
+      "latitude": 53.598017,
+      "longitude": 10.101459,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T09:18:01.987314Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25716,
+      "name": "U Farmsen / Rahlstedter Weg",
+      "latitude": 53.606246,
+      "longitude": 10.12021,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:48:07.53815Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25717,
+      "name": "Herthastraße / Bramfelder Chaussee",
+      "latitude": 53.611878,
+      "longitude": 10.075913,
+      "availableBikes": 13,
+      "observedAt": "2026-08-09T09:38:03.594202Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 25718,
+      "name": "Bramfelder Chaussee / Maisredder",
+      "latitude": 53.6268,
+      "longitude": 10.0852700000001,
+      "availableBikes": 11,
+      "observedAt": "2026-08-08T22:03:01.923805Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25719,
+      "name": "U Feldstraße / Marktstraße",
+      "latitude": 53.557414,
+      "longitude": 9.969178,
+      "availableBikes": 23,
+      "observedAt": "2026-08-09T09:53:03.900894Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25720,
+      "name": "S+U Wandsbeker Chaussee / Börnestraße",
+      "latitude": 53.57047,
+      "longitude": 10.059528,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:53:03.904035Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25721,
+      "name": "S Hasselbrook / Papenstraße",
+      "latitude": 53.564805,
+      "longitude": 10.054679,
+      "availableBikes": 11,
+      "observedAt": "2026-08-09T09:33:05.948921Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25722,
+      "name": "Hasselbrookstraße / Ritterstraße",
+      "latitude": 53.56394,
+      "longitude": 10.0459500000001,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T09:43:03.337057Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25723,
+      "name": "Gustav-Mahler-Platz / Büschstraße",
+      "latitude": 53.556282,
+      "longitude": 9.990091,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T09:33:05.955334Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25724,
+      "name": "Großneumarkt / Thielbek",
+      "latitude": 53.550977,
+      "longitude": 9.980459,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T07:18:02.05948Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25725,
+      "name": "Enckeplatz / Hütten",
+      "latitude": 53.5524,
+      "longitude": 9.97695,
+      "availableBikes": 17,
+      "observedAt": "2026-08-09T08:53:01.466806Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25726,
+      "name": "Bernhard-Nocht-Straße / Zirkusweg",
+      "latitude": 53.54732,
+      "longitude": 9.965669,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:08:06.369068Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25727,
+      "name": "U Rödingsmarkt / Großer Burstah",
+      "latitude": 53.54872,
+      "longitude": 9.98728000000005,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:38:03.626185Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25728,
+      "name": "Rathausmarkt / Mönckebergstraße",
+      "latitude": 53.550193,
+      "longitude": 9.99011,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:53:03.924832Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25729,
+      "name": "U Baumwall / Elbphilharmonie",
+      "latitude": 53.544279,
+      "longitude": 9.980896,
+      "availableBikes": 25,
+      "observedAt": "2026-08-09T09:48:07.580608Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25730,
+      "name": "U Hammer Kirche / Hammer Park",
+      "latitude": 53.556699,
+      "longitude": 10.055075,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T08:53:01.482349Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25731,
+      "name": "Süderstraße / Osterbrookplatz",
+      "latitude": 53.546932,
+      "longitude": 10.057613,
+      "availableBikes": 54,
+      "observedAt": "2026-08-09T08:38:02.938365Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25732,
+      "name": "Manshardtstraße / Einkaufszentrum Manshardtstraße",
+      "latitude": 53.559215,
+      "longitude": 10.107447,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T06:03:03.723441Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25733,
+      "name": "U HafenCity Universität / Versmannstraße",
+      "latitude": 53.540782,
+      "longitude": 10.006168,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:38:03.645049Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25734,
+      "name": "Osakaallee / Überseequartier",
+      "latitude": 53.541583,
+      "longitude": 9.999731,
+      "availableBikes": 18,
+      "observedAt": "2026-08-09T09:23:05.365887Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25735,
+      "name": "Oberbaumbrücke / Ericusspitze",
+      "latitude": 53.5458,
+      "longitude": 10.0030200000001,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T08:53:01.496123Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25736,
+      "name": "Auf dem Sande / Kehrwieder / Miniatur Wunderland",
+      "latitude": 53.543731,
+      "longitude": 9.98971,
+      "availableBikes": 20,
+      "observedAt": "2026-08-09T09:28:03.39134Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25737,
+      "name": "Heidenkampsweg / R+V Versicherung",
+      "latitude": 53.5438499999999,
+      "longitude": 10.0313100000001,
+      "availableBikes": 20,
+      "observedAt": "2026-08-09T06:28:03.072442Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25738,
+      "name": "Vierlandenstraße / Johann-Adolf-Hasse-Platz",
+      "latitude": 53.488449,
+      "longitude": 10.210913,
+      "availableBikes": 24,
+      "observedAt": "2026-03-31T15:31:01.77323Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25739,
+      "name": "Eidelstedt Center / Elbgaustraße",
+      "latitude": 53.60655,
+      "longitude": 9.90390000000003,
+      "availableBikes": 24,
+      "observedAt": "2026-08-09T09:38:03.658512Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25740,
+      "name": "Hohenzollernring / Friedensallee",
+      "latitude": 53.55671,
+      "longitude": 9.918508,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:48:07.618356Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25741,
+      "name": "S Othmarschen / Beselerplatz",
+      "latitude": 53.560395,
+      "longitude": 9.887159,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T08:38:02.965954Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25742,
+      "name": "Eiffestraße / Normannenweg",
+      "latitude": 53.552123,
+      "longitude": 10.030364,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T06:28:03.100052Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25743,
+      "name": "Weg beim Jäger / Lufthansa 2",
+      "latitude": 53.62059,
+      "longitude": 9.99709,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T09:58:02.394477Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25744,
+      "name": "Stadtdeich / Hammerbrooklyn",
+      "latitude": 53.545791,
+      "longitude": 10.0076430000001,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T07:53:04.679522Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25745,
+      "name": "Schopenstehl / Alter Fischmarkt",
+      "latitude": 53.548703,
+      "longitude": 9.997126,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T20:43:03.30387Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25746,
+      "name": "S+U Jungfernstieg / Ballindamm",
+      "latitude": 53.552244,
+      "longitude": 9.99550100000006,
+      "availableBikes": 21,
+      "observedAt": "2026-08-09T09:48:07.636748Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25747,
+      "name": "Michaeliskirche / Krayenkamp",
+      "latitude": 53.547975,
+      "longitude": 9.97942,
+      "availableBikes": 14,
+      "observedAt": "2026-08-09T08:48:02.039767Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25748,
+      "name": "Herbert-Wehner-Platz / Großer Schippsee",
+      "latitude": 53.460407,
+      "longitude": 9.983319,
+      "availableBikes": 41,
+      "observedAt": "2026-08-09T09:03:01.794453Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25749,
+      "name": "Harburger Ring / Neue Straße",
+      "latitude": 53.4606874,
+      "longitude": 9.9775729,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T00:08:07.696922Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25750,
+      "name": "Kurze Mühren / Spitalerstraße",
+      "latitude": 53.552611,
+      "longitude": 10.00415,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:33:06.032036Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25751,
+      "name": "U Burgstraße / Hammer Landstraße",
+      "latitude": 53.555693,
+      "longitude": 10.041298,
+      "availableBikes": 44,
+      "observedAt": "2026-08-09T09:48:07.651301Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25752,
+      "name": "Steindamm / Stralsunder Straße",
+      "latitude": 53.554216,
+      "longitude": 10.013306,
+      "availableBikes": 35,
+      "observedAt": "2026-08-09T09:38:03.700897Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25753,
+      "name": "S+U Berliner Tor / Beim Strohhause",
+      "latitude": 53.5533,
+      "longitude": 10.0246,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:18:02.108223Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25754,
+      "name": "Lange Reihe / Lohmühlenpark",
+      "latitude": 53.5599,
+      "longitude": 10.0149,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T09:48:07.661511Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25755,
+      "name": "Neuenfelder Straße / Kurt-Emmerich-Platz",
+      "latitude": 53.497232,
+      "longitude": 10.003843,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T00:28:03.262548Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25756,
+      "name": "Versmannstraße / Gerda-Gmelin Platz",
+      "latitude": 53.5399914,
+      "longitude": 10.0134874000001,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T08:38:03.008722Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25757,
+      "name": "S Rothenburgsort / Billhorner Deich",
+      "latitude": 53.540103,
+      "longitude": 10.04287,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:53:04.013464Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25758,
+      "name": "Amsinckstraße / Nordkanalbrücke",
+      "latitude": 53.547868,
+      "longitude": 10.012361,
+      "availableBikes": 15,
+      "observedAt": "2026-08-09T09:18:02.126846Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25759,
+      "name": "S Veddel / Wilhelmsburger Platz",
+      "latitude": 53.522794,
+      "longitude": 10.01481,
+      "availableBikes": 45,
+      "observedAt": "2026-08-09T08:33:03.995373Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25760,
+      "name": "Peutestraße / Hatraco",
+      "latitude": 53.523815,
+      "longitude": 10.036626,
+      "availableBikes": 38,
+      "observedAt": "2026-08-08T19:28:02.347367Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25761,
+      "name": "Moorfleeter Straße / Pinkertweg",
+      "latitude": 53.52636,
+      "longitude": 10.09269,
+      "availableBikes": 1,
+      "observedAt": "2026-08-07T12:03:05.568304Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25762,
+      "name": "Lohbrügger Landstraße / BG Klinikum",
+      "latitude": 53.50789,
+      "longitude": 10.1800800000001,
+      "availableBikes": 1,
+      "observedAt": "2026-07-31T15:05:01.877886Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25763,
+      "name": "Korachstraße / Helmuth-Hübener-Weg",
+      "latitude": 53.51022,
+      "longitude": 10.2074600000001,
+      "availableBikes": 1,
+      "observedAt": "2026-08-07T10:28:01.998779Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25764,
+      "name": "Karl-Arnold-Ring / Dahlgrünring",
+      "latitude": 53.48461,
+      "longitude": 10.01886,
+      "availableBikes": 18,
+      "observedAt": "2026-08-09T06:43:04.036446Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25765,
+      "name": "Heidhorst / Bockhorster Weg",
+      "latitude": 53.51738,
+      "longitude": 10.1686300000001,
+      "availableBikes": 10,
+      "observedAt": "2026-08-08T21:23:02.473445Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25766,
+      "name": "Binnenfeldredder / Habermannstraße",
+      "latitude": 53.50404,
+      "longitude": 10.21091,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:03:01.862761Z",
+      "status": "low",
+      "region": "south"
+    },
+    {
+      "id": 25767,
+      "name": "Schellerdamm / Hausnummer 22",
+      "latitude": 53.464282,
+      "longitude": 9.986136,
+      "availableBikes": 11,
+      "observedAt": "2026-08-09T09:08:06.530255Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25768,
+      "name": "S Heimfeld / Alter Postweg",
+      "latitude": 53.465276,
+      "longitude": 9.963537,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T05:43:02.362921Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 25769,
+      "name": "Henriette-Herz-Ring / Grachtenplatz",
+      "latitude": 53.48288,
+      "longitude": 10.1765600000001,
+      "availableBikes": 11,
+      "observedAt": "2026-08-09T09:48:07.719027Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25770,
+      "name": "Denickestraße / TUHH",
+      "latitude": 53.460622,
+      "longitude": 9.969487,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:43:03.485615Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25771,
+      "name": "Bahnhof Harburg / Moorstraße",
+      "latitude": 53.457286,
+      "longitude": 9.987994,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T09:23:05.510266Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25772,
+      "name": "Gotthelfweg / Außenmühlenteich",
+      "latitude": 53.447625,
+      "longitude": 9.980675,
+      "availableBikes": 17,
+      "observedAt": "2026-08-09T09:48:07.733281Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25773,
+      "name": "Gert-Marcus-Straße / Anni-Glissmann-Weg",
+      "latitude": 53.60342,
+      "longitude": 9.97278000000005,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T09:28:03.512558Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25774,
+      "name": "Holstenstraße / Max-Brauer-Allee",
+      "latitude": 53.55865,
+      "longitude": 9.94873000000004,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T22:28:03.991295Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25775,
+      "name": "Große Rainstraße / Ottenser Hauptstraße",
+      "latitude": 53.552339,
+      "longitude": 9.930344,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:43:03.475091Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25776,
+      "name": "Bahnhof Altona / Busbahnhof",
+      "latitude": 53.5518,
+      "longitude": 9.93387,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:53:04.082906Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25777,
+      "name": "Max-Zelck-Straße / Haus der Kirche",
+      "latitude": 53.62052,
+      "longitude": 9.94504,
+      "availableBikes": 1,
+      "observedAt": "2026-08-07T15:08:05.256764Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25778,
+      "name": "Schulterblatt / Eifflerstraße",
+      "latitude": 53.562709,
+      "longitude": 9.96099,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T09:33:06.126192Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25779,
+      "name": "Neuer Pferdemarkt / Beim Grünen Jäger",
+      "latitude": 53.558869,
+      "longitude": 9.963824,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:13:05.42772Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25780,
+      "name": "Holstenstraße / Thadenstraße",
+      "latitude": 53.555827,
+      "longitude": 9.950708,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:48:07.758019Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25781,
+      "name": "Chemnitzstraße / Max-Brauer-Allee",
+      "latitude": 53.5553,
+      "longitude": 9.94286,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T08:03:05.166623Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25782,
+      "name": "AKN Eidelstedt Zentrum / Johann-Schmidt-Straße",
+      "latitude": 53.6095,
+      "longitude": 9.90051,
+      "availableBikes": 18,
+      "observedAt": "2026-08-09T08:38:03.091861Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25783,
+      "name": "U Hagenbecks Tierpark / Koppelstraße",
+      "latitude": 53.593587,
+      "longitude": 9.943525,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:28:03.539605Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25784,
+      "name": "S Stellingen / Randstraße",
+      "latitude": 53.590248,
+      "longitude": 9.919356,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T08:53:01.673145Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25785,
+      "name": "U Merkenstraße / Möllner Landstraße",
+      "latitude": 53.5386,
+      "longitude": 10.12237,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T01:48:01.861512Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25786,
+      "name": "Heußweg / Wiesenstraße",
+      "latitude": 53.577796,
+      "longitude": 9.953073,
+      "availableBikes": 11,
+      "observedAt": "2026-08-09T09:53:04.112315Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25787,
+      "name": "Methfesselstraße / Luruper Weg",
+      "latitude": 53.58006,
+      "longitude": 9.946786,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T08:48:02.182222Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25788,
+      "name": "Lappenbergsallee / Bei der Apostelkirche",
+      "latitude": 53.575573,
+      "longitude": 9.944487,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T09:53:04.11659Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25789,
+      "name": "Grandweg / Veilchenweg",
+      "latitude": 53.589185,
+      "longitude": 9.964681,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T08:53:01.692165Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25790,
+      "name": "Eppendorfer Weg / Hoheluftchaussee",
+      "latitude": 53.581754,
+      "longitude": 9.971242,
+      "availableBikes": 21,
+      "observedAt": "2026-08-09T09:48:07.787957Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25791,
+      "name": "Zentralbibliothek / Münzstraße",
+      "latitude": 53.550332,
+      "longitude": 10.008849,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T08:43:03.867913Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25792,
+      "name": "Amerigo-Vespucci-Platz / Baakenwerder Straße",
+      "latitude": 53.536541,
+      "longitude": 10.0221890000001,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:53:04.130699Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25793,
+      "name": "U Hallerstraße / Rothenbaumchaussee",
+      "latitude": 53.572081,
+      "longitude": 9.988801,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:53:04.134179Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25794,
+      "name": "Mittelweg / Sophienterrasse",
+      "latitude": 53.576378,
+      "longitude": 9.993122,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T07:58:02.475088Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25795,
+      "name": "Innocentiapark / Oberstraße",
+      "latitude": 53.577248,
+      "longitude": 9.98211,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T08:38:03.138608Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25796,
+      "name": "Harvestehuder Weg / Alte Rabenstraße",
+      "latitude": 53.5672,
+      "longitude": 10.0011,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:43:03.571849Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25797,
+      "name": "Südring / Stadthallenbrücke",
+      "latitude": 53.591446,
+      "longitude": 10.030327,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T09:28:03.585379Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25798,
+      "name": "Grindelberg / Bezirksamt Eimsbüttel",
+      "latitude": 53.575408,
+      "longitude": 9.977824,
+      "availableBikes": 16,
+      "observedAt": "2026-08-09T09:28:03.58858Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25799,
+      "name": "AKN Schnelsen / Pinneberger Straße",
+      "latitude": 53.63321,
+      "longitude": 9.90643,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T07:53:04.901623Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 25800,
+      "name": "S Neugraben / Am Neugrabener Bahnhof",
+      "latitude": 53.47379,
+      "longitude": 9.85369000000003,
+      "availableBikes": 17,
+      "observedAt": "2026-08-09T09:28:03.616543Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25801,
+      "name": "Eimsbütteler Straße / Waterloostraße",
+      "latitude": 53.5662,
+      "longitude": 9.9534,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T08:58:04.230228Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25802,
+      "name": "Caspar-Voght-Straße / Sievekingsallee",
+      "latitude": 53.559893,
+      "longitude": 10.061703,
+      "availableBikes": 7,
+      "observedAt": "2026-08-09T09:48:07.858348Z",
+      "status": "healthy",
+      "region": "east"
+    },
+    {
+      "id": 25803,
+      "name": "Bullerdeich / Stadtreinigung Hamburg",
+      "latitude": 53.544979,
+      "longitude": 10.03685,
+      "availableBikes": 6,
+      "observedAt": "2026-08-09T08:13:03.425336Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25804,
+      "name": "Bruno-Tesch-Platz / Jessenstraße",
+      "latitude": 53.5512,
+      "longitude": 9.94576000000004,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:38:03.904441Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25805,
+      "name": "Bredowstraße / Pinkertweg",
+      "latitude": 53.52691,
+      "longitude": 10.07924,
+      "availableBikes": 1,
+      "observedAt": "2026-08-07T12:38:04.044101Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 25806,
+      "name": "Am Strandkai / Großer Grasbrook",
+      "latitude": 53.53958,
+      "longitude": 9.99365,
+      "availableBikes": 23,
+      "observedAt": "2026-08-09T08:18:04.559525Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25807,
+      "name": "Am Kaiserkai / Großer Grasbrook",
+      "latitude": 53.541838,
+      "longitude": 9.992856,
+      "availableBikes": 13,
+      "observedAt": "2026-08-09T08:08:02.596826Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25808,
+      "name": "Alsterschwimmhalle / Ifflandstraße",
+      "latitude": 53.560781,
+      "longitude": 10.022148,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:33:06.253994Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25809,
+      "name": "U Hoheluftbrücke / Kaiser-Friedrich-Ufer",
+      "latitude": 53.578054,
+      "longitude": 9.976014,
+      "availableBikes": 1,
+      "observedAt": "2026-07-29T08:00:02.31322Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25810,
+      "name": "Leinpfad / Fernsicht",
+      "latitude": 53.580391,
+      "longitude": 9.999404,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:53:04.218788Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25811,
+      "name": "Jungfernstieg / Neuer Jungfernstieg",
+      "latitude": 53.555,
+      "longitude": 9.9914,
+      "availableBikes": 28,
+      "observedAt": "2026-08-09T09:48:07.894716Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25812,
+      "name": "S Friedrichsberg / Krausestraße",
+      "latitude": 53.576238,
+      "longitude": 10.058237,
+      "availableBikes": 34,
+      "observedAt": "2026-08-09T09:28:03.66295Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25813,
+      "name": "S Reeperbahn / Königstraße",
+      "latitude": 53.549501,
+      "longitude": 9.954934,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:53:04.003589Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25814,
+      "name": "Bogenstraße / Grindelallee",
+      "latitude": 53.5712,
+      "longitude": 9.977694,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T09:38:03.109165Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25815,
+      "name": "Emil-Andresen-Straße / Lohkoppelweg",
+      "latitude": 53.59285,
+      "longitude": 9.952055,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T08:53:01.785408Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25816,
+      "name": "Eduard-Rhein-Ufer / Schwanenwik",
+      "latitude": 53.5677,
+      "longitude": 10.0162,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:43:03.620761Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25817,
+      "name": "Lange Reihe / Kirchenallee",
+      "latitude": 53.5552,
+      "longitude": 10.0082,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T08:43:03.030887Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25818,
+      "name": "Fischersallee / Bleickenallee",
+      "latitude": 53.550966,
+      "longitude": 9.92226,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:13:05.147797Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25819,
+      "name": "Lämmersieth / Wachtelstraße",
+      "latitude": 53.5868299999999,
+      "longitude": 10.0569400000001,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T03:33:02.661173Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25820,
+      "name": "Mönckebergstraße / Steintorwall",
+      "latitude": 53.5516,
+      "longitude": 10.0054,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T07:23:04.749223Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25821,
+      "name": "U Uhlandstraße / Eilenau",
+      "latitude": 53.565,
+      "longitude": 10.0267,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:53:03.556844Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25822,
+      "name": "Eulenstraße / Große Brunnenstraße",
+      "latitude": 53.550816,
+      "longitude": 9.925653,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:28:03.522797Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25823,
+      "name": "Ottenser Marktplatz / Platz der Republik",
+      "latitude": 53.547905,
+      "longitude": 9.934844,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T09:53:04.077726Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 25824,
+      "name": "U Meßberg / Willy-Brandt-Straße",
+      "latitude": 53.547805,
+      "longitude": 9.998774,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:53:03.625654Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25825,
+      "name": "U Rathaus / Mönckebergstraße",
+      "latitude": 53.550722,
+      "longitude": 9.99714,
+      "availableBikes": 10,
+      "observedAt": "2026-08-08T21:48:01.52131Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 25826,
+      "name": "Maretstraße / Baererstraße",
+      "latitude": 53.453704,
+      "longitude": 9.982275,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T06:53:05.868961Z",
+      "status": "healthy",
+      "region": "south"
+    },
+    {
+      "id": 25827,
+      "name": "Osdorfer Landstraße / Elbe-Einkaufszentrum",
+      "latitude": 53.571629,
+      "longitude": 9.862423,
+      "availableBikes": 20,
+      "observedAt": "2026-08-09T02:48:01.612466Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25828,
+      "name": "Schöne Aussicht / Karlstraße",
+      "latitude": 53.57392,
+      "longitude": 10.0080800000001,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:38:03.414398Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 25829,
+      "name": "Notkestraße / DESY Gebäude 25b",
+      "latitude": 53.578608,
+      "longitude": 9.882799,
+      "availableBikes": 1,
+      "observedAt": "2026-08-07T15:33:04.319013Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 25830,
+      "name": "Bleickenallee / Kinderkrankenhaus Altona",
+      "latitude": 53.5512881,
+      "longitude": 9.9129134,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:23:05.524037Z",
+      "status": "low",
+      "region": "west"
+    },
+    {
+      "id": 25831,
+      "name": "Schreyerring / Fehlinghöhe",
+      "latitude": 53.610149,
+      "longitude": 10.058096,
+      "availableBikes": 28,
+      "observedAt": "2026-08-08T18:28:03.48763Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 25832,
+      "name": "Sievekingsallee / Sievekingdamm",
+      "latitude": 53.560835,
+      "longitude": 10.052589,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T08:58:03.733014Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 25833,
+      "name": "U Langenhorn Nord / Foorthkamp",
+      "latitude": 53.66098,
+      "longitude": 10.0169500000001,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T07:53:04.031826Z",
+      "status": "low",
+      "region": "north"
+    },
+    {
+      "id": 26090,
+      "name": "Danziger Straße / Rostocker Straße",
+      "latitude": 53.55622100830078,
+      "longitude": 10.014399528503418,
+      "availableBikes": 4,
+      "observedAt": "2026-03-31T17:31:01.827567Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 26091,
+      "name": "Rehrstieg / Hausbrucher Str.",
+      "latitude": 53.480464935302734,
+      "longitude": 9.874502182006836,
+      "availableBikes": 5,
+      "observedAt": "2026-08-08T23:48:02.851962Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 26149,
+      "name": "Hagenbeckstraße / Lenzweg",
+      "latitude": 53.58354187011719,
+      "longitude": 9.947859764099121,
+      "availableBikes": 1,
+      "observedAt": "2026-08-09T09:18:02.363301Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 26150,
+      "name": "Wendlohstraße / Braunlager Weg",
+      "latitude": 53.62971115112305,
+      "longitude": 9.940930366516113,
+      "availableBikes": 8,
+      "observedAt": "2026-08-09T09:48:07.919464Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 26151,
+      "name": "U Berne / Berner Heerweg",
+      "latitude": 53.62727737426758,
+      "longitude": 10.13941478729248,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T19:18:01.376532Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 26152,
+      "name": "Harald-Stender-Platz / FC St. Pauli",
+      "latitude": 53.553436279296875,
+      "longitude": 9.966055870056152,
+      "availableBikes": 27,
+      "observedAt": "2026-08-09T09:53:04.283753Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 26157,
+      "name": "Norbert-Schmid-Platz / Tegelsbarg",
+      "latitude": 53.65385055541992,
+      "longitude": 10.062378883361816,
+      "availableBikes": 13,
+      "observedAt": "2026-08-08T20:33:01.446922Z",
+      "status": "stale",
+      "region": "north"
+    },
+    {
+      "id": 26174,
+      "name": "Hammerbrookstraße / Kurt-Schumacher-Allee",
+      "latitude": 53.55284118652344,
+      "longitude": 10.018939971923828,
+      "availableBikes": 1,
+      "observedAt": "2026-08-08T23:53:03.485607Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 26176,
+      "name": "Deelböge / Orchideenstieg",
+      "latitude": 53.60255813598633,
+      "longitude": 9.989839553833008,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T08:58:03.393145Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 26177,
+      "name": "Dweerlandweg / JVA Billwerder",
+      "latitude": 53.509700775146484,
+      "longitude": 10.11076831817627,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T04:03:03.193957Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 26209,
+      "name": "Jakobikirchhhof / Steinstraße",
+      "latitude": 53.55030059814453,
+      "longitude": 10.001500129699707,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T08:53:01.89143Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 26210,
+      "name": "Bramfelder Chaussee / Energienetze Hamburg",
+      "latitude": 53.60273742675781,
+      "longitude": 10.070695877075195,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T14:53:06.134361Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 26287,
+      "name": "AKN Burgwedel / Roman-Zeller-Platz",
+      "latitude": 53.647239685058594,
+      "longitude": 9.908980369567871,
+      "availableBikes": 10,
+      "observedAt": "2026-08-09T09:38:03.99379Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 26288,
+      "name": "Wördemanns Weg / Vogt-Kölln-Straße",
+      "latitude": 53.59775924682617,
+      "longitude": 9.931900024414062,
+      "availableBikes": 12,
+      "observedAt": "2026-08-09T06:18:07.967277Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 26291,
+      "name": "Brillkamp / Hummelsbütteler Markt",
+      "latitude": 53.64252853393555,
+      "longitude": 10.04751968383789,
+      "availableBikes": 20,
+      "observedAt": "2026-08-09T07:18:01.316509Z",
+      "status": "healthy",
+      "region": "north"
+    },
+    {
+      "id": 26292,
+      "name": "Neugrabener Markt / Neugrabener Bahnhofstraße ",
+      "latitude": 53.46976852416992,
+      "longitude": 9.852299690246582,
+      "availableBikes": 11,
+      "observedAt": "2026-08-08T18:33:02.825316Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 26293,
+      "name": "Dieselstraße / Middendorfstraße",
+      "latitude": 53.5988883972168,
+      "longitude": 10.054490089416504,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:48:07.936507Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 26294,
+      "name": "Neuer Weg / Brookdeich",
+      "latitude": 53.484458923339844,
+      "longitude": 10.212360382080078,
+      "availableBikes": 16,
+      "observedAt": "2026-08-08T23:38:06.691212Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 37346,
+      "name": "Baumkamp / Ohlsdorfer Straße",
+      "latitude": 53.59922409057617,
+      "longitude": 10.005681037902832,
+      "availableBikes": 2,
+      "observedAt": "2026-08-09T09:43:02.804644Z",
+      "status": "low",
+      "region": "central"
+    },
+    {
+      "id": 37347,
+      "name": "Eckhoffplatz / Lurup-Center",
+      "latitude": 53.592220306396484,
+      "longitude": 9.872870445251465,
+      "availableBikes": 17,
+      "observedAt": "2026-08-08T23:58:05.045739Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 37348,
+      "name": "Haubachstraße / Gerichtstraße",
+      "latitude": 53.55842971801758,
+      "longitude": 9.940210342407227,
+      "availableBikes": 5,
+      "observedAt": "2026-08-09T09:48:07.706874Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 37349,
+      "name": "Ueckerstraße / Welsestraße",
+      "latitude": 53.60470199584961,
+      "longitude": 9.880256652832031,
+      "availableBikes": 2,
+      "observedAt": "2026-08-08T18:58:04.749174Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 37350,
+      "name": "Hinter der Dorfkirche / Leipeltstraße",
+      "latitude": 53.4906005859375,
+      "longitude": 10.007180213928223,
+      "availableBikes": 4,
+      "observedAt": "2026-08-08T16:23:04.762208Z",
+      "status": "stale",
+      "region": "south"
+    },
+    {
+      "id": 37351,
+      "name": "Langbargheide / Moorwisch",
+      "latitude": 53.595680236816406,
+      "longitude": 9.889909744262695,
+      "availableBikes": 4,
+      "observedAt": "2026-08-08T13:08:07.321533Z",
+      "status": "stale",
+      "region": "west"
+    },
+    {
+      "id": 37352,
+      "name": "S Billwerder-Moorfleet / Alter Landweg",
+      "latitude": 53.51641845703125,
+      "longitude": 10.096400260925293,
+      "availableBikes": 4,
+      "observedAt": "2026-08-09T06:28:03.471411Z",
+      "status": "stale",
+      "region": "east"
+    },
+    {
+      "id": 37353,
+      "name": "Bornheide / Achtern Born",
+      "latitude": 53.587158203125,
+      "longitude": 9.851530075073242,
+      "availableBikes": 3,
+      "observedAt": "2026-08-09T07:13:06.764964Z",
+      "status": "healthy",
+      "region": "west"
+    },
+    {
+      "id": 37354,
+      "name": "U Osterstraße / Heußweg",
+      "latitude": 53.57597351074219,
+      "longitude": 9.95233154296875,
+      "availableBikes": 9,
+      "observedAt": "2026-08-09T09:53:03.341313Z",
+      "status": "healthy",
+      "region": "central"
+    },
+    {
+      "id": 37442,
+      "name": "Sustainability Week / Rathausmarkt ",
+      "latitude": 53.55057144165039,
+      "longitude": 9.994109153747559,
+      "availableBikes": 3,
+      "observedAt": "2026-07-01T22:42:02.703159Z",
+      "status": "stale",
+      "region": "central"
+    },
+    {
+      "id": 37443,
+      "name": "Niedergeorgswerder Deich / Rahmwerder Straße",
+      "latitude": 53.512359619140625,
+      "longitude": 10.020830154418945,
+      "availableBikes": 21,
+      "observedAt": "2026-08-09T07:33:02.213566Z",
+      "status": "healthy",
+      "region": "central"
+    }
+  ],
+  "history": [
+    {
+      "hour": "2026-08-08T10:00:00Z",
+      "availableBikes": 48,
+      "observations": 49
+    },
+    {
+      "hour": "2026-08-08T11:00:00Z",
+      "availableBikes": 47,
+      "observations": 48
+    },
+    {
+      "hour": "2026-08-08T12:00:00Z",
+      "availableBikes": 48,
+      "observations": 43
+    },
+    {
+      "hour": "2026-08-08T13:00:00Z",
+      "availableBikes": 46,
+      "observations": 50
+    },
+    {
+      "hour": "2026-08-08T14:00:00Z",
+      "availableBikes": 50,
+      "observations": 55
+    },
+    {
+      "hour": "2026-08-08T15:00:00Z",
+      "availableBikes": 47,
+      "observations": 56
+    },
+    {
+      "hour": "2026-08-08T16:00:00Z",
+      "availableBikes": 49,
+      "observations": 61
+    },
+    {
+      "hour": "2026-08-08T17:00:00Z",
+      "availableBikes": 52,
+      "observations": 43
+    },
+    {
+      "hour": "2026-08-08T18:00:00Z",
+      "availableBikes": 50,
+      "observations": 48
+    },
+    {
+      "hour": "2026-08-08T19:00:00Z",
+      "availableBikes": 48,
+      "observations": 39
+    },
+    {
+      "hour": "2026-08-08T20:00:00Z",
+      "availableBikes": 50,
+      "observations": 35
+    },
+    {
+      "hour": "2026-08-08T21:00:00Z",
+      "availableBikes": 56,
+      "observations": 28
+    },
+    {
+      "hour": "2026-08-08T22:00:00Z",
+      "availableBikes": 52,
+      "observations": 27
+    },
+    {
+      "hour": "2026-08-08T23:00:00Z",
+      "availableBikes": 45,
+      "observations": 11
+    },
+    {
+      "hour": "2026-08-09T00:00:00Z",
+      "availableBikes": 45,
+      "observations": 11
+    },
+    {
+      "hour": "2026-08-09T01:00:00Z",
+      "availableBikes": 51,
+      "observations": 12
+    },
+    {
+      "hour": "2026-08-09T02:00:00Z",
+      "availableBikes": 42,
+      "observations": 4
+    },
+    {
+      "hour": "2026-08-09T03:00:00Z",
+      "availableBikes": 50,
+      "observations": 4
+    },
+    {
+      "hour": "2026-08-09T04:00:00Z",
+      "availableBikes": 51,
+      "observations": 7
+    },
+    {
+      "hour": "2026-08-09T05:00:00Z",
+      "availableBikes": 51,
+      "observations": 14
+    },
+    {
+      "hour": "2026-08-09T06:00:00Z",
+      "availableBikes": 47,
+      "observations": 11
+    },
+    {
+      "hour": "2026-08-09T07:00:00Z",
+      "availableBikes": 51,
+      "observations": 28
+    },
+    {
+      "hour": "2026-08-09T08:00:00Z",
+      "availableBikes": 52,
+      "observations": 40
+    },
+    {
+      "hour": "2026-08-09T09:00:00Z",
+      "availableBikes": 52,
+      "observations": 39
+    }
+  ]
+}
