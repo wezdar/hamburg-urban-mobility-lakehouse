@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
   const title = "ElbeFlow — Hamburg Urban Mobility Lakehouse";
-  const description = "84,000+ official Hamburg mobility streams, 450M+ scheduled records and a reproducible multi-source lakehouse.";
+  const description = "84.000+ offizielle Hamburger Mobilitätsströme, 450 Mio.+ geplante Datensätze und ein reproduzierbares Multi-Source-Lakehouse.";
   return {
     metadataBase: new URL(origin),
     title,
@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de" dir="ltr">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

@@ -18,13 +18,18 @@ test("server-renders the Hamburg mobility product", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /<title>ElbeFlow — Hamburg Urban Mobility Lakehouse<\/title>/i);
-  assert.match(html, /Mobility,/);
-  assert.match(html, /Official data universe/);
-  assert.match(html, /StadtRAD live pulse/);
-  assert.match(html, /Lakehouse architecture/);
+  assert.match(html, /<html[^>]+lang="de"[^>]+dir="ltr"/i);
+  assert.match(html, /Mobilität,/);
+  assert.match(html, /Offizielles Datenuniversum/);
+  assert.match(html, /StadtRAD live/);
+  assert.match(html, /Lakehouse-Architektur/);
   assert.match(html, /Hamburg Urban Data Platform/);
-  assert.match(html, /459\.0M\+/);
-  assert.match(html, /84,191/);
+  assert.match(html, /459,0M\+/);
+  assert.match(html, /84\.191/);
+  assert.match(html, /aria-label="Deutsch"/);
+  assert.match(html, /aria-label="English"/);
+  assert.match(html, /aria-label="Français"/);
+  assert.match(html, /aria-label="العربية"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 

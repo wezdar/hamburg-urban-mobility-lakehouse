@@ -18,7 +18,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-family: var(--font-geist-sans), "Noto Sans Arabic", "Geeza Pro", Tahoma, Arial, sans-serif;
   text-rendering: geometricPrecision;
 }
 button, a { font: inherit; }
@@ -49,6 +49,11 @@ main { min-height: 100vh; overflow-x: hidden; }
 .topbar nav { display: flex; gap: 8px; padding: 5px; border: 1px solid var(--line); border-radius: 999px; }
 .topbar nav a { padding: 7px 15px; border-radius: 999px; font-size: 12px; font-weight: 650; color: var(--muted); transition: 160ms ease; }
 .topbar nav a:hover, .topbar nav a.is-active { color: var(--paper); background: var(--ink); }
+.topbar__actions { justify-self: end; display: flex; align-items: center; gap: 14px; min-width: 0; }
+.language-switcher { display: inline-flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; direction: ltr; }
+.language-switcher button { width: 31px; height: 27px; padding: 0; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font-family: var(--font-geist-mono); font-size: 8px; font-weight: 720; letter-spacing: .04em; cursor: pointer; transition: background .16s ease, color .16s ease; }
+.language-switcher button:hover, .language-switcher button.is-selected { background: var(--ink); color: var(--paper); }
+.language-switcher button:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
 .live-pill { justify-self: end; display: flex; align-items: center; gap: 9px; font-family: var(--font-geist-mono); font-size: 10px; letter-spacing: .08em; }
 .live-pill > span { width: 8px; height: 8px; border-radius: 50%; background: #9aa19e; }
 .live-pill .pulse { background: var(--coral); box-shadow: 0 0 0 0 rgba(255, 114, 94, .5); animation: pulse 2s infinite; }
@@ -227,6 +232,29 @@ footer p { margin: 0; color: rgba(243,241,232,.5); font-size: 11px; text-align: 
 footer > div:last-child { display: flex; justify-content: end; gap: 20px; align-items: center; font-family: var(--font-geist-mono); font-size: 8px; color: rgba(243,241,232,.55); }
 footer a { color: var(--lime); }
 
+.dashboard-shell[dir="rtl"] { font-family: "Noto Sans Arabic", "Geeza Pro", Tahoma, Arial, sans-serif; }
+.dashboard-shell[dir="rtl"] .brand,
+.dashboard-shell[dir="rtl"] .language-switcher,
+.dashboard-shell[dir="rtl"] .hero__meta,
+.dashboard-shell[dir="rtl"] .network-map,
+.dashboard-shell[dir="rtl"] .bar-chart,
+.dashboard-shell[dir="rtl"] .panel__hint,
+.dashboard-shell[dir="rtl"] .source-card > strong { direction: ltr; }
+.dashboard-shell[dir="rtl"] .eyebrow,
+.dashboard-shell[dir="rtl"] .metric-card__label,
+.dashboard-shell[dir="rtl"] .source-card__top,
+.dashboard-shell[dir="rtl"] .source-card__meta,
+.dashboard-shell[dir="rtl"] .coverage-timeline__axis,
+.dashboard-shell[dir="rtl"] .coverage-row > span,
+.dashboard-shell[dir="rtl"] .chart-summary span,
+.dashboard-shell[dir="rtl"] .quality-ring span { letter-spacing: 0; }
+.dashboard-shell[dir="rtl"] .station-list > li > b { text-align: left; }
+.dashboard-shell[dir="rtl"] .coverage-timeline__axis span:last-child,
+.dashboard-shell[dir="rtl"] .coverage-row > span { text-align: left; }
+.dashboard-shell[dir="rtl"] .coverage-row > div i { right: auto; }
+.dashboard-shell[dir="rtl"] .flow-arrow { transform: rotate(180deg); }
+.dashboard-shell[dir="rtl"] footer > div:last-child { justify-content: start; }
+
 @media (max-width: 1200px) {
   .source-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .source-card { border-bottom: 1px solid rgba(243,241,232,.16); }
@@ -254,6 +282,9 @@ footer a { color: var(--lime); }
 
 @media (max-width: 680px) {
   .topbar { height: 64px; }
+  .topbar__actions { gap: 8px; }
+  .topbar__actions .live-pill { display: none; }
+  .language-switcher button { width: 29px; }
   .hero { padding-top: 65px; gap: 40px; }
   h1 { font-size: clamp(58px, 21vw, 94px); }
   .source-grid { grid-template-columns: 1fr; }
@@ -270,6 +301,7 @@ footer a { color: var(--lime); }
   .pipeline__flow { display: grid; grid-template-columns: 1fr; }
   .flow-node { min-height: 160px; }
   .flow-arrow { transform: rotate(90deg); justify-self: center; }
+  .dashboard-shell[dir="rtl"] .flow-arrow { transform: rotate(90deg); }
   footer { grid-template-columns: 1fr; text-align: left; }
   footer p { text-align: left; }
   footer > div:last-child { justify-content: start; }
