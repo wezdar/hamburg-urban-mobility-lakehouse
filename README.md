@@ -9,7 +9,9 @@
 
 An end-to-end data engineering portfolio project that turns five official Hamburg mobility systems into a reproducible historical lakehouse and a multilingual decision dashboard. It demonstrates ingestion, partitioning, orchestration, quality contracts, analytics and product delivery in one repository.
 
-![German dashboard overview](docs/screenshots/dashboard-de-overview.jpg)
+[![German dashboard overview](docs/screenshots/dashboard-de-overview.png)](docs/screenshots/dashboard-de-overview.png)
+
+> Click any dashboard image to open the full-resolution version.
 
 ## Why this project stands out
 
@@ -30,40 +32,47 @@ The full history is generated outside Git because it can exceed **459 million sc
 
 The source atlas makes scale, cadence, historical reach and ingestion strategy explicit for every domain.
 
-![Official source atlas](docs/screenshots/dashboard-de-sources.jpg)
+[![Official source atlas](docs/screenshots/dashboard-de-sources.png)](docs/screenshots/dashboard-de-sources.png)
 
 ### 2. Live network intelligence
 
 The operational view combines station geography, bike availability, capacity and ranking signals. If the official endpoint is unavailable, the interface keeps a recent verified snapshot and clearly labels its status.
 
-![Live Hamburg mobility network](docs/screenshots/dashboard-de-network.jpg)
+[![Live Hamburg mobility network](docs/screenshots/dashboard-de-network.png)](docs/screenshots/dashboard-de-network.png)
 
 ### 3. Data quality that is visible, not implied
 
 The dashboard exposes freshness, completeness, validity, uniqueness and the data contract used by the pipeline.
 
-![Data quality and contract](docs/screenshots/dashboard-de-quality.jpg)
+[![Data quality and contract](docs/screenshots/dashboard-de-quality.png)](docs/screenshots/dashboard-de-quality.png)
 
 ### 4. Recruiter-readable architecture
 
 The architecture screen connects source APIs to immutable bronze files, Parquet silver data, DuckDB, dbt marts and the product layer.
 
-![Lakehouse pipeline](docs/screenshots/dashboard-de-pipeline.jpg)
+[![Lakehouse pipeline](docs/screenshots/dashboard-de-pipeline.png)](docs/screenshots/dashboard-de-pipeline.png)
 
 ## Multilingual and responsive UI
 
 German is the default. The language switcher also provides English, French and Arabic; Arabic changes both copy and document direction to RTL. The dashboard is fully responsive.
 
-<table>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/dashboard-en-overview.jpg" alt="English dashboard"></td>
-    <td width="50%"><img src="docs/screenshots/dashboard-fr-overview.jpg" alt="French dashboard"></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/dashboard-ar-overview.jpg" alt="Arabic RTL dashboard"></td>
-    <td width="50%"><img src="docs/screenshots/dashboard-mobile-de.jpg" alt="German mobile dashboard"></td>
-  </tr>
-</table>
+### English
+
+[![English dashboard](docs/screenshots/dashboard-en-overview.png)](docs/screenshots/dashboard-en-overview.png)
+
+### French
+
+[![French dashboard](docs/screenshots/dashboard-fr-overview.png)](docs/screenshots/dashboard-fr-overview.png)
+
+### Arabic with right-to-left layout
+
+[![Arabic RTL dashboard](docs/screenshots/dashboard-ar-overview.png)](docs/screenshots/dashboard-ar-overview.png)
+
+### Mobile
+
+<a href="docs/screenshots/dashboard-mobile-de.png">
+  <img src="docs/screenshots/dashboard-mobile-de.png" alt="German mobile dashboard" width="390">
+</a>
 
 ## How a recruiter can review it in five minutes
 

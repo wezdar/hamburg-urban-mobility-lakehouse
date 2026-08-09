@@ -192,23 +192,24 @@ def screenshot_page(
 ) -> None:
     page_background(canvas, page_number, "Product walkthrough")
     title(canvas, heading, subtitle)
-    left_x = 38
-    left_w = 205
-    image_x = 266
-    image_y = 73
-    image_w = PAGE_W - image_x - 38
-    image_h = 393
-    canvas.setFillColor(TEAL)
-    canvas.roundRect(left_x, 410, left_w, 48, 8, fill=1, stroke=0)
-    canvas.setFillColor(WHITE)
-    canvas.setFont(FONT_BOLD, 12)
-    canvas.drawString(left_x + 14, 438, insight_title)
-    canvas.setFont(FONT, 8)
-    canvas.drawString(left_x + 14, 422, "WHAT THE SCREEN PROVES")
-    y = paragraph(canvas, description, left_x, 392, left_w, BODY) - 10
-    bullet_list(canvas, bullets, left_x, y, left_w)
+    image_x = 60
+    # Keep the screenshot below the title/subtitle block so every page remains
+    # readable at normal PDF zoom while preserving a large product view.
+    image_y = 96
+    image_w = PAGE_W - 120
+    image_h = 390
     draw_screenshot(canvas, filename, image_x, image_y, image_w, image_h, anchor="top")
-    paragraph(canvas, caption, image_x, 59, image_w, CAPTION)
+
+    canvas.setFillColor(TEAL)
+    canvas.roundRect(60, 48, 172, 42, 8, fill=1, stroke=0)
+    canvas.setFillColor(WHITE)
+    canvas.setFont(FONT_BOLD, 10.5)
+    canvas.drawString(73, 73, insight_title)
+    canvas.setFont(FONT, 7)
+    canvas.drawString(73, 59, "WHAT THE SCREEN PROVES")
+    paragraph(canvas, description, 252, 84, 285, SMALL)
+    paragraph(canvas, " • ".join(bullets), 550, 84, 232, CAPTION)
+    paragraph(canvas, caption, 60, 37, PAGE_W - 120, CAPTION)
     canvas.showPage()
 
 
@@ -333,7 +334,7 @@ def build_report() -> None:
         3,
         "Executive dashboard",
         "German is the default experience for the Hamburg target market.",
-        "dashboard-de-overview.jpg",
+        "dashboard-de-overview.png",
         "Scale in seconds",
         "The opening view gives reviewers immediate evidence of the project’s size, source diversity and reproducibility.",
         [
@@ -349,7 +350,7 @@ def build_report() -> None:
         4,
         "Official source atlas",
         "A single catalogue explains five very different operational datasets.",
-        "dashboard-de-sources.jpg",
+        "dashboard-de-sources.png",
         "Source diversity",
         "Each card communicates ownership, cadence, historical coverage, stream count and ingestion behavior.",
         [
@@ -365,7 +366,7 @@ def build_report() -> None:
         5,
         "Network intelligence",
         "Spatial context and station performance turn raw availability records into decisions.",
-        "dashboard-de-network.jpg",
+        "dashboard-de-network.png",
         "Operational value",
         "The network view combines geography, current capacity, availability and station ranking in one analytical surface.",
         [
@@ -381,7 +382,7 @@ def build_report() -> None:
         6,
         "Quality and data contract",
         "Reliability is presented as measurable product behavior.",
-        "dashboard-de-quality.jpg",
+        "dashboard-de-quality.png",
         "Trust is visible",
         "Freshness, completeness, validity and uniqueness are shown beside the rules that protect downstream analytics.",
         [
@@ -397,7 +398,7 @@ def build_report() -> None:
         7,
         "Lakehouse architecture",
         "The dashboard explains how the repository turns APIs into analytics.",
-        "dashboard-de-pipeline.jpg",
+        "dashboard-de-pipeline.png",
         "End-to-end ownership",
         "The architecture view connects ingestion, object storage, analytical modeling, orchestration and delivery.",
         [
@@ -413,7 +414,7 @@ def build_report() -> None:
         8,
         "English interface",
         "The full product can be evaluated by an international hiring team.",
-        "dashboard-en-overview.jpg",
+        "dashboard-en-overview.png",
         "International review",
         "English localization covers navigation, source metadata, operational labels, quality explanations and formatting.",
         [
@@ -429,7 +430,7 @@ def build_report() -> None:
         9,
         "French interface",
         "Localization is implemented at the product layer, not as a static mock-up.",
-        "dashboard-fr-overview.jpg",
+        "dashboard-fr-overview.png",
         "Consistent semantics",
         "French users receive translated labels and explanations while every metric remains sourced from the same typed dataset.",
         [
@@ -445,7 +446,7 @@ def build_report() -> None:
         10,
         "Arabic right-to-left interface",
         "The application changes both language and document direction.",
-        "dashboard-ar-overview.jpg",
+        "dashboard-ar-overview.png",
         "Real RTL behavior",
         "Arabic is not only translated: navigation, hierarchy, alignment and reading flow are mirrored for right-to-left use.",
         [
@@ -460,7 +461,7 @@ def build_report() -> None:
     # 11 · Mobile screenshot needs a portrait-specific composition.
     page_background(canvas, 11, "Responsive delivery")
     title(canvas, "Mobile experience", "The same decision product remains usable on a 390 × 844 viewport.")
-    draw_screenshot(canvas, "dashboard-mobile-de.jpg", 52, 58, 270, 430, anchor="top")
+    draw_screenshot(canvas, "dashboard-mobile-de.png", 52, 58, 270, 430, anchor="top")
     rounded_card(canvas, 360, 98, 430, 338)
     canvas.setFillColor(TEAL)
     canvas.roundRect(384, 377, 140, 28, 14, fill=1, stroke=0)
