@@ -49,6 +49,7 @@ next-env.d.ts
 /transform/target/
 /transform/logs/
 /transform/dbt_packages/
+**/.terraform/*
 
 # Python
 /.venv/

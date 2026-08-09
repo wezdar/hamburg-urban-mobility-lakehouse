@@ -238,13 +238,13 @@ def build_report() -> None:
     canvas.drawString(44, PAGE_H - 185, "Hamburg Urban Mobility Lakehouse")
     canvas.setFillColor(HexColor("#C7E4E0"))
     canvas.setFont(FONT, 14)
-    canvas.drawString(46, PAGE_H - 218, "From five official SensorThings systems to a multilingual decision product")
+    canvas.drawString(46, PAGE_H - 218, "Seven official urban layers, explainable analytics and a multilingual decision product")
 
     metrics = [
         ("84,191", "official streams"),
         ("~459M", "scheduled observations"),
         ("102,994", "verified sample rows"),
-        ("2009 → live", "historical coverage"),
+        ("7", "official data layers"),
     ]
     x = 44
     for value, label in metrics:
@@ -260,7 +260,7 @@ def build_report() -> None:
 
     canvas.setFillColor(WHITE)
     canvas.setFont(FONT_BOLD, 11)
-    canvas.drawString(46, 165, "PYTHON · PARQUET · DUCKDB · DBT · AIRFLOW · REACT · TYPESCRIPT")
+    canvas.drawString(46, 165, "PYTHON · PARQUET · DUCKDB · DBT · REACT · TERRAFORM · OPENTELEMETRY")
     canvas.setFillColor(HexColor("#BBD7D4"))
     canvas.setFont(FONT, 9)
     canvas.drawString(46, 140, "German by default · English · French · Arabic with right-to-left layout")
@@ -278,7 +278,7 @@ def build_report() -> None:
         ("01", "INGEST", "Paginated source adapters, bounded retries and incremental monthly windows."),
         ("02", "STORE", "Immutable JSONL/Gzip bronze and partitioned Parquet/ZSTD silver."),
         ("03", "MODEL", "DuckDB analytics, dbt transformations and explicit quality contracts."),
-        ("04", "DELIVER", "Responsive React dashboard with live refresh and verified fallback."),
+        ("04", "DELIVER", "Predictive, multilingual React product with cloud and observability assets."),
     ]
     x = 38
     for index, label, copy in stages:
@@ -334,14 +334,14 @@ def build_report() -> None:
         3,
         "Executive dashboard",
         "German is the default experience for the Hamburg target market.",
-        "dashboard-de-overview.png",
+        "dashboard-de-overview-v2.jpg",
         "Scale in seconds",
         "The opening view gives reviewers immediate evidence of the project’s size, source diversity and reproducibility.",
         [
             "84,191 exact SensorThings streams",
             "~459 million scheduled records",
             "102,994 verified real sample rows",
-            "Five official Hamburg data domains",
+            "Seven official Hamburg data layers",
         ],
         "Figure 1 — Default German overview with live-status indicator and headline metrics.",
     )
@@ -350,7 +350,7 @@ def build_report() -> None:
         4,
         "Official source atlas",
         "A single catalogue explains five very different operational datasets.",
-        "dashboard-de-sources.png",
+        "dashboard-de-sources-v2.jpg",
         "Source diversity",
         "Each card communicates ownership, cadence, historical coverage, stream count and ingestion behavior.",
         [
@@ -364,25 +364,57 @@ def build_report() -> None:
     screenshot_page(
         canvas,
         5,
-        "Network intelligence",
-        "Spatial context and station performance turn raw availability records into decisions.",
-        "dashboard-de-network.png",
+        "Multi-layer city map",
+        "A bright map makes official traffic, HVV and StadtRAD signals readable and interactive.",
+        "dashboard-de-network-v2.jpg",
         "Operational value",
-        "The network view combines geography, current capacity, availability and station ranking in one analytical surface.",
+        "The map provides real geographic context, independent layer controls and click-through detail for each operational signal.",
         [
-            "Hamburg station locations and current status",
-            "Capacity and bike-availability encoding",
-            "Ranked station-level performance",
-            "Snapshot fallback for resilient demonstrations",
+            "12 current Polizei Hamburg traffic notices",
+            "12 official HVV rail hubs and lines",
+            "360 StadtRAD stations with health states",
+            "Light basemap with readable roads and the Elbe",
         ],
-        "Figure 3 — Map and live station ranking built from official StadtRAD observations.",
+        "Figure 3 — Traffic-only layer with an official notice selected on the redesigned light map.",
     )
     screenshot_page(
         canvas,
         6,
+        "Predictive mobility",
+        "Forecasts remain explainable, back-tested and explicit about uncertainty.",
+        "dashboard-de-intelligence.jpg",
+        "No black-box claims",
+        "A rolling baseline produces a 12-hour availability outlook, while the historical explorer shows reproducible source coverage rather than invented observations.",
+        [
+            "12 forecast points with a confidence indicator",
+            "Mean absolute error from a rolling holdout",
+            "Interactive historical coverage from 2009 to 2026",
+            "Scheduled capacity calculated from source cadence",
+        ],
+        "Figure 4 — Explainable forecast KPIs and reproducible historical explorer.",
+    )
+    screenshot_page(
+        canvas,
+        7,
+        "Operations and sustainability",
+        "Rule-based alerts, scenario impact and model quality share one decision surface.",
+        "dashboard-de-operations.jpg",
+        "Operational honesty",
+        "Alerts come directly from station states and police closures. CO2 is clearly labelled as a scenario estimate, never a measured emission.",
+        [
+            "Prioritised empty and stale station alerts",
+            "Current road closures from official WFS data",
+            "Transparent CO2 formula and assumptions",
+            "Model card with MAE and holdout size",
+        ],
+        "Figure 5 — Operations centre with anomaly, environmental and model-quality evidence.",
+    )
+    screenshot_page(
+        canvas,
+        8,
         "Quality and data contract",
         "Reliability is presented as measurable product behavior.",
-        "dashboard-de-quality.png",
+        "dashboard-de-quality-v2.jpg",
         "Trust is visible",
         "Freshness, completeness, validity and uniqueness are shown beside the rules that protect downstream analytics.",
         [
@@ -391,14 +423,14 @@ def build_report() -> None:
             "Domain checks for impossible negative counts",
             "Clear separation of verified and estimated values",
         ],
-        "Figure 4 — Quality indicators and the explicit contract enforced by the pipeline.",
+        "Figure 6 — Quality indicators and the explicit contract enforced by the pipeline.",
     )
     screenshot_page(
         canvas,
-        7,
+        9,
         "Lakehouse architecture",
         "The dashboard explains how the repository turns APIs into analytics.",
-        "dashboard-de-pipeline.png",
+        "dashboard-de-pipeline-v2.jpg",
         "End-to-end ownership",
         "The architecture view connects ingestion, object storage, analytical modeling, orchestration and delivery.",
         [
@@ -407,14 +439,30 @@ def build_report() -> None:
             "DuckDB + dbt for local analytics and contracts",
             "Airflow orchestration and automated validation",
         ],
-        "Figure 5 — Recruiter-readable bronze/silver/warehouse/product architecture.",
+        "Figure 7 — Recruiter-readable bronze/silver/warehouse/product architecture.",
     )
     screenshot_page(
         canvas,
-        8,
+        10,
+        "Lineage, observability and cloud",
+        "Every metric is connected from source to product and to a concrete deployment path.",
+        "dashboard-de-lineage.jpg",
+        "Production readiness",
+        "The visible lineage is backed by repository assets for containers, Terraform, OpenTelemetry and GitHub Actions validation.",
+        [
+            "Seven sources through bronze, silver and contracts",
+            "DuckDB + dbt analytical serving layer",
+            "Dockerised web and pipeline workloads",
+            "Terraform ECS/S3 reference and OTLP collector",
+        ],
+        "Figure 8 — End-to-end lineage with health states and cloud-ready delivery assets.",
+    )
+    screenshot_page(
+        canvas,
+        11,
         "English interface",
         "The full product can be evaluated by an international hiring team.",
-        "dashboard-en-overview.png",
+        "dashboard-en-overview-v2.jpg",
         "International review",
         "English localization covers navigation, source metadata, operational labels, quality explanations and formatting.",
         [
@@ -423,14 +471,14 @@ def build_report() -> None:
             "Stable analytical meaning across languages",
             "One-click language switching",
         ],
-        "Figure 6 — English overview preserving the same analytical hierarchy as German.",
+        "Figure 9 — English overview preserving the same analytical hierarchy as German.",
     )
     screenshot_page(
         canvas,
-        9,
+        12,
         "French interface",
         "Localization is implemented at the product layer, not as a static mock-up.",
-        "dashboard-fr-overview.png",
+        "dashboard-fr-overview-v2.jpg",
         "Consistent semantics",
         "French users receive translated labels and explanations while every metric remains sourced from the same typed dataset.",
         [
@@ -439,14 +487,14 @@ def build_report() -> None:
             "Identical data lineage and interactions",
             "Shared component system avoids interface drift",
         ],
-        "Figure 7 — French overview using the common data and component model.",
+        "Figure 10 — French overview using the common data and component model.",
     )
     screenshot_page(
         canvas,
-        10,
+        13,
         "Arabic right-to-left interface",
         "The application changes both language and document direction.",
-        "dashboard-ar-overview.png",
+        "dashboard-ar-overview-v2.jpg",
         "Real RTL behavior",
         "Arabic is not only translated: navigation, hierarchy, alignment and reading flow are mirrored for right-to-left use.",
         [
@@ -455,13 +503,13 @@ def build_report() -> None:
             "Layout-specific alignment corrections",
             "Latin digits retained for technical readability",
         ],
-        "Figure 8 — Arabic overview with genuine RTL layout behavior.",
+        "Figure 11 — Arabic overview with genuine RTL layout behavior.",
     )
 
-    # 11 · Mobile screenshot needs a portrait-specific composition.
-    page_background(canvas, 11, "Responsive delivery")
+    # 14 · Mobile screenshot needs a portrait-specific composition.
+    page_background(canvas, 14, "Responsive delivery")
     title(canvas, "Mobile experience", "The same decision product remains usable on a 390 × 844 viewport.")
-    draw_screenshot(canvas, "dashboard-mobile-de.png", 52, 58, 270, 430, anchor="top")
+    draw_screenshot(canvas, "dashboard-mobile-de-v2.jpg", 52, 58, 270, 430, anchor="top")
     rounded_card(canvas, 360, 98, 430, 338)
     canvas.setFillColor(TEAL)
     canvas.roundRect(384, 377, 140, 28, 14, fill=1, stroke=0)
@@ -494,7 +542,7 @@ def build_report() -> None:
     )
     paragraph(
         canvas,
-        "Figure 9 — German mobile overview captured from the running application.",
+        "Figure 12 — German mobile overview captured from the running application.",
         384,
         124,
         350,

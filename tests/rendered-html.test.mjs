@@ -22,6 +22,13 @@ test("server-renders the Hamburg mobility product", async () => {
   assert.match(html, /Mobilität,/);
   assert.match(html, /Offizielles Datenuniversum/);
   assert.match(html, /StadtRAD live/);
+  assert.match(html, /Helle, interaktive Hamburg-Karte/);
+  assert.match(html, /12-Stunden-Verfügbarkeitsprognose/);
+  assert.match(html, /Historischer Explorer/);
+  assert.match(html, /Anomalien, Wirkung und Modellgüte/);
+  assert.match(html, /Nachhaltigkeitsszenario/);
+  assert.match(html, /Vollständig nachvollziehbar/);
+  assert.match(html, /OPEN­TELEMETRY/);
   assert.match(html, /Lakehouse-Architektur/);
   assert.match(html, /Hamburg Urban Data Platform/);
   assert.match(html, /459,0M\+/);
@@ -31,6 +38,16 @@ test("server-renders the Hamburg mobility product", async () => {
   assert.match(html, /aria-label="Français"/);
   assert.match(html, /aria-label="العربية"/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
+});
+
+test("committed official urban layers have recruiter-visible scale and provenance", async () => {
+  const snapshot = await import("../app/data/urban-intelligence.json", { with: { type: "json" } });
+  const payload = snapshot.default;
+  assert.ok(payload.trafficEvents.length >= 10);
+  assert.ok(payload.transitStops.length >= 10);
+  assert.equal(payload.provenance.traffic.license, "DL-DE-BY-2.0");
+  assert.equal(payload.provenance.transit.license, "DL-DE-BY-2.0");
+  assert.equal(payload.emissionsModel.avoidedCarKgPerKm, 0.148);
 });
 
 test("live endpoint always returns a usable payload", async () => {

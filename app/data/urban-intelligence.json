@@ -1,0 +1,251 @@
+{
+  "generatedAt": "2026-08-09T13:15:00Z",
+  "provenance": {
+    "traffic": {
+      "name": "Aktuelle Verkehrsinformationen Polizei Hamburg",
+      "url": "https://geodienste.hamburg.de/wfs_verkehrsinformation",
+      "license": "DL-DE-BY-2.0",
+      "featureType": "de.hh.up:hauptmeldungen_aktuell"
+    },
+    "transit": {
+      "name": "Einzugsbereiche von HVV-Haltestellen",
+      "url": "https://geodienste.hamburg.de/HH_WFS_HVV_Einzugsbereiche",
+      "license": "DL-DE-BY-2.0",
+      "featureType": "de.hh.up:haltestellenbereiche_bahn"
+    }
+  },
+  "trafficEvents": [
+    {
+      "id": "LMS-638635",
+      "status": "construction",
+      "title": "Überseering",
+      "description": "Closure between New-York-Ring and Jahnring for construction works.",
+      "latitude": 53.60378,
+      "longitude": 10.01746,
+      "start": "2023-05-30T06:00:00Z",
+      "end": "2033-06-30T21:59:00Z"
+    },
+    {
+      "id": "LMS-1001226",
+      "status": "construction",
+      "title": "Große Reichenstraße",
+      "description": "Closed in both directions between Alter Fischmarkt and Domstraße.",
+      "latitude": 53.54839,
+      "longitude": 9.99685,
+      "start": "2026-08-03T05:55:00Z",
+      "end": "2026-09-18T16:00:00Z"
+    },
+    {
+      "id": "LMS-1001228",
+      "status": "construction",
+      "title": "Litzowstieg",
+      "description": "Road closed between Litzowstraße and Hinterm Stern.",
+      "latitude": 53.57365,
+      "longitude": 10.06915,
+      "start": "2026-08-03T05:55:00Z",
+      "end": "2026-08-17T16:00:00Z"
+    },
+    {
+      "id": "LMS-1001232",
+      "status": "construction",
+      "title": "Bachstraße",
+      "description": "Construction closure between Herderstraße and Mozartstraße.",
+      "latitude": 53.58145,
+      "longitude": 10.01979,
+      "start": "2026-08-03T06:00:00Z",
+      "end": "2026-10-10T15:00:00Z"
+    },
+    {
+      "id": "LMS-1001256",
+      "status": "construction",
+      "title": "Ludwig-Erhard-Straße",
+      "description": "Lane restriction between Admiralitätstraße and Herrengrabenbrücke.",
+      "latitude": 53.54821,
+      "longitude": 9.98451,
+      "start": "2026-08-03T05:00:00Z",
+      "end": "2026-08-28T15:00:00Z"
+    },
+    {
+      "id": "LMS-1001399",
+      "status": "construction",
+      "title": "Lübeckertordamm",
+      "description": "Changed traffic management and lane restriction near Lübecker Straße.",
+      "latitude": 53.55723,
+      "longitude": 10.02044,
+      "start": "2026-08-03T09:50:00Z",
+      "end": "2026-09-30T21:59:00Z"
+    },
+    {
+      "id": "LMS-1001868",
+      "status": "closure",
+      "title": "Eilbektal",
+      "description": "Road closed near Friedrichsberger Park because of fallen trees.",
+      "latitude": 53.5745,
+      "longitude": 10.05544,
+      "start": "2026-08-04T04:45:00Z"
+    },
+    {
+      "id": "LMS-1002119",
+      "status": "construction",
+      "title": "Grindelallee",
+      "description": "Right lane closed between Grindelhof and Heinrich-Barth-Straße.",
+      "latitude": 53.56719,
+      "longitude": 9.981,
+      "start": "2026-08-04T10:55:00Z",
+      "end": "2026-08-28T16:00:00Z"
+    },
+    {
+      "id": "LMS-1003511",
+      "status": "closure",
+      "title": "Gänsemarkt",
+      "description": "Closed in both directions between Jungfernstieg and Dammtorstraße.",
+      "latitude": 53.5551,
+      "longitude": 9.98942,
+      "start": "2026-08-07T19:00:00Z",
+      "end": "2026-08-10T04:00:00Z"
+    },
+    {
+      "id": "LMS-1004135",
+      "status": "congestion",
+      "title": "A7 Volkspark - Elbtunnel",
+      "description": "Three kilometres of slow-moving traffic toward Hamburg.",
+      "latitude": 53.58361,
+      "longitude": 9.91581,
+      "start": "2026-08-09T10:55:00Z"
+    },
+    {
+      "id": "LMS-1004143",
+      "status": "construction",
+      "title": "B5 Bergedorfer Straße",
+      "description": "Lane restriction between Schurzallee-Nord and Hamburg-Billstedt.",
+      "latitude": 53.55003,
+      "longitude": 10.06661,
+      "start": "2026-08-09T10:00:00Z",
+      "end": "2026-08-16T16:00:00Z"
+    },
+    {
+      "id": "LMS-1004147",
+      "status": "congestion",
+      "title": "A7 Hausbruch - Elbtunnel",
+      "description": "Five kilometres of slow-moving traffic toward Flensburg.",
+      "latitude": 53.48168,
+      "longitude": 9.9145,
+      "start": "2026-08-09T11:50:00Z"
+    }
+  ],
+  "transitStops": [
+    {
+      "id": "de:02000:10950",
+      "name": "Hamburg Hbf",
+      "mode": "regional",
+      "lines": ["RB61", "RB81", "RE1", "RE7", "RE70", "RE8", "RE80", "RE83"],
+      "departures": 178,
+      "latitude": 53.55282,
+      "longitude": 10.00685
+    },
+    {
+      "id": "de:02000:84903",
+      "name": "Schlump",
+      "mode": "u-bahn",
+      "lines": ["U3"],
+      "departures": 481,
+      "latitude": 53.56775,
+      "longitude": 9.96992
+    },
+    {
+      "id": "de:02000:90904",
+      "name": "Kellinghusenstraße",
+      "mode": "u-bahn",
+      "lines": ["U1", "U3"],
+      "departures": 457,
+      "latitude": 53.58881,
+      "longitude": 9.99098
+    },
+    {
+      "id": "de:02000:10905",
+      "name": "Hamburg Hbf Nord",
+      "mode": "u-bahn",
+      "lines": ["U2", "U4"],
+      "departures": 690,
+      "latitude": 53.55417,
+      "longitude": 10.00735
+    },
+    {
+      "id": "de:02000:10908",
+      "name": "Burgstraße",
+      "mode": "u-bahn",
+      "lines": ["U2", "U4"],
+      "departures": 647,
+      "latitude": 53.55586,
+      "longitude": 10.04187
+    },
+    {
+      "id": "de:02000:10909",
+      "name": "Hammer Kirche",
+      "mode": "u-bahn",
+      "lines": ["U2", "U4"],
+      "departures": 647,
+      "latitude": 53.55564,
+      "longitude": 10.05516
+    },
+    {
+      "id": "de:02000:10951",
+      "name": "Hammerbrook",
+      "mode": "s-bahn",
+      "lines": ["S3", "S31"],
+      "departures": 421,
+      "latitude": 53.54663,
+      "longitude": 10.02374
+    },
+    {
+      "id": "de:02000:10952",
+      "name": "Berliner Tor",
+      "mode": "s-bahn",
+      "lines": ["S1", "S11", "S31"],
+      "departures": 317,
+      "latitude": 53.553,
+      "longitude": 10.02467
+    },
+    {
+      "id": "de:02000:11952",
+      "name": "Stadthausbrücke",
+      "mode": "s-bahn",
+      "lines": ["S1", "S2", "S3"],
+      "departures": 531,
+      "latitude": 53.54957,
+      "longitude": 9.98556
+    },
+    {
+      "id": "de:02000:11901",
+      "name": "Stephansplatz",
+      "mode": "u-bahn",
+      "lines": ["U1"],
+      "departures": 441,
+      "latitude": 53.55887,
+      "longitude": 9.98922
+    },
+    {
+      "id": "de:02000:11905",
+      "name": "Rathaus",
+      "mode": "u-bahn",
+      "lines": ["U3"],
+      "departures": 481,
+      "latitude": 53.55038,
+      "longitude": 9.99404
+    },
+    {
+      "id": "de:02000:11907",
+      "name": "Baumwall",
+      "mode": "u-bahn",
+      "lines": ["U3"],
+      "departures": 481,
+      "latitude": 53.54423,
+      "longitude": 9.98186
+    }
+  ],
+  "emissionsModel": {
+    "avoidedCarKgPerKm": 0.148,
+    "assumedTripKm": 3.2,
+    "method": "Scenario estimate only: available bikes × assumed trip distance × avoided car emissions."
+  }
+}
