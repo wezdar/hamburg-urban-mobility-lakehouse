@@ -260,7 +260,7 @@ def build_report() -> None:
 
     canvas.setFillColor(WHITE)
     canvas.setFont(FONT_BOLD, 11)
-    canvas.drawString(46, 165, "PYTHON · PARQUET · DUCKDB · DBT · REACT · TERRAFORM · OPENTELEMETRY")
+    canvas.drawString(46, 165, "PYTHON · PARQUET · DUCKDB · DBT · REACT · MAPLIBRE · TERRAFORM · OTEL")
     canvas.setFillColor(HexColor("#BBD7D4"))
     canvas.setFont(FONT, 9)
     canvas.drawString(46, 140, "German by default · English · French · Arabic with right-to-left layout")
@@ -364,18 +364,18 @@ def build_report() -> None:
     screenshot_page(
         canvas,
         5,
-        "Multi-layer city map",
-        "A bright map makes official traffic, HVV and StadtRAD signals readable and interactive.",
-        "dashboard-de-network-v2.jpg",
-        "Operational value",
-        "The map provides real geographic context, independent layer controls and click-through detail for each operational signal.",
+        "Professional geographic city map",
+        "A MapLibre vector map turns official traffic, HVV and StadtRAD coordinates into a real spatial product.",
+        "dashboard-de-network-v3.png",
+        "Coordinate integrity",
+        "The map covers the full Hamburg operating area and keeps every point anchored to its official longitude and latitude while users pan, zoom and inspect layers.",
         [
             "12 current Polizei Hamburg traffic notices",
             "12 official HVV rail hubs and lines",
-            "360 StadtRAD stations with health states",
-            "Light basemap with readable roads and the Elbe",
+            "359 valid live station positions from the official feed",
+            "Dynamic clusters, zoom-dependent radii and street detail",
         ],
-        "Figure 3 — Traffic-only layer with an official notice selected on the redesigned light map.",
+        "Figure 3 — Full Hamburg extent on the MapLibre/OpenStreetMap vector basemap with all mobility layers enabled.",
     )
     screenshot_page(
         canvas,
@@ -508,8 +508,8 @@ def build_report() -> None:
 
     # 14 · Mobile screenshot needs a portrait-specific composition.
     page_background(canvas, 14, "Responsive delivery")
-    title(canvas, "Mobile experience", "The same decision product remains usable on a 390 × 844 viewport.")
-    draw_screenshot(canvas, "dashboard-mobile-de-v2.jpg", 52, 58, 270, 430, anchor="top")
+    title(canvas, "Mobile map experience", "The same geographic product remains usable on a 390 × 844 viewport.")
+    draw_screenshot(canvas, "dashboard-mobile-map-de-v3.png", 52, 58, 270, 430, anchor="top")
     rounded_card(canvas, 360, 98, 430, 338)
     canvas.setFillColor(TEAL)
     canvas.roundRect(384, 377, 140, 28, 14, fill=1, stroke=0)
@@ -518,11 +518,11 @@ def build_report() -> None:
     canvas.drawCentredString(454, 387, "RESPONSIVE PRODUCT")
     canvas.setFillColor(INK)
     canvas.setFont(FONT_BOLD, 18)
-    canvas.drawString(384, 344, "Designed beyond the desktop demo")
+    canvas.drawString(384, 344, "A real map on every viewport")
     y = paragraph(
         canvas,
-        "The mobile layout preserves the live state, core scale metrics and language controls without horizontal overflow. "
-        "Dense analytical sections collapse into a readable single-column experience.",
+        "The mobile layout preserves the complete MapLibre interaction surface without horizontal overflow. "
+        "Touch zoom, pan, clustering, layer controls and the full-Hamburg reset remain available in a readable single-column experience.",
         384,
         318,
         370,
@@ -533,8 +533,8 @@ def build_report() -> None:
         [
             "Verified at 390 × 844 pixels",
             "No horizontal document overflow",
-            "Accessible language controls remain available",
-            "Headline metrics preserve their visual priority",
+            "Touch zoom and pan stay enabled",
+            "Map controls and layer filters remain reachable",
         ],
         384,
         y - 12,
@@ -542,7 +542,7 @@ def build_report() -> None:
     )
     paragraph(
         canvas,
-        "Figure 12 — German mobile overview captured from the running application.",
+        "Figure 12 — Full Hamburg vector map on the German mobile interface.",
         384,
         124,
         350,

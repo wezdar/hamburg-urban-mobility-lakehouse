@@ -9,20 +9,17 @@ import {
   type Translation,
 } from "../lib/i18n";
 import { intelligenceTranslations } from "../lib/intelligence-i18n";
-import type { DashboardData, MobilitySource, Station, StationStatus } from "../lib/types";
+import type { DashboardData, MobilitySource, StationStatus } from "../lib/types";
 import intelligenceSnapshot from "../data/urban-intelligence.json";
+import {
+  HamburgMobilityMap,
+  type MapLayer,
+  type MapSelection,
+} from "./HamburgMobilityMap";
 
 type Props = { initialData: DashboardData };
 type Range = "6H" | "12H" | "24H";
 type StatusFilter = "all" | StationStatus;
-type MapLayer = "bikes" | "traffic" | "transit" | "all";
-type TrafficEvent = (typeof intelligenceSnapshot.trafficEvents)[number];
-type TransitStop = (typeof intelligenceSnapshot.transitStops)[number];
-type MapSelection =
-  | { kind: "bike"; item: Station }
-  | { kind: "traffic"; item: TrafficEvent }
-  | { kind: "transit"; item: TransitStop }
-  | null;
 
 function formatNumber(value: number, locale: string) {
   return new Intl.NumberFormat(locale).format(value);
@@ -56,13 +53,6 @@ function freshnessLabel(value: string, asOf: string, copy: Translation) {
 
 function formatYear(value: string) {
   return new Date(value).getUTCFullYear();
-}
-
-function projectCoordinate(longitude: number, latitude: number) {
-  return {
-    x: ((longitude - 9.72) / (10.25 - 9.72)) * 100,
-    y: 100 - ((latitude - 53.43) / (53.73 - 53.43)) * 100,
-  };
 }
 
 function buildForecast(history: DashboardData["history"]) {
@@ -195,141 +185,6 @@ function SourceAtlas({ sources, copy }: { sources: MobilitySource[]; copy: Trans
         })}
       </div>
     </section>
-  );
-}
-
-function NetworkMap({
-  stations,
-  status,
-  copy,
-  language,
-  layer,
-  onLayerChange,
-  selection,
-  onSelect,
-}: {
-  stations: Station[];
-  status: StatusFilter;
-  copy: Translation;
-  language: Language;
-  layer: MapLayer;
-  onLayerChange: (layer: MapLayer) => void;
-  selection: MapSelection;
-  onSelect: (selection: MapSelection) => void;
-}) {
-  const intelligenceCopy = intelligenceTranslations[language];
-  const visible = stations
-    .filter((station) => status === "all" || station.status === status)
-    .filter((station) => station.longitude >= 9.72 && station.longitude <= 10.25)
-    .filter((station) => station.latitude >= 53.43 && station.latitude <= 53.73);
-  const plotted = visible.slice(0, 220);
-  const showBikes = layer === "bikes" || layer === "all";
-  const showTraffic = layer === "traffic" || layer === "all";
-  const showTransit = layer === "transit" || layer === "all";
-
-  const selectedTitle = !selection
-    ? ""
-    : selection.kind === "traffic"
-      ? selection.item.title
-      : selection.item.name;
-
-  return (
-    <div className="map-experience" dir="ltr">
-      <div className="map-toolbar">
-        <div>
-          <b>{intelligenceCopy.map.clearTitle}</b>
-          <span>{intelligenceCopy.map.officialLayers}</span>
-        </div>
-        <div className="map-layer-switcher" role="group" aria-label={intelligenceCopy.map.layers}>
-          {(["bikes", "traffic", "transit", "all"] as MapLayer[]).map((value) => (
-            <button key={value} type="button" className={layer === value ? "is-selected" : ""} onClick={() => onLayerChange(value)}>
-              {intelligenceCopy.map[value]}
-            </button>
-          ))}
-        </div>
-      </div>
-      <div className="network-map network-map--light" aria-label={copy.map.mapAria}>
-        <svg className="network-map__basemap" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
-          <rect width="1000" height="560" fill="#eef1e7" />
-          <path className="map-water" d="M-40 406 C130 354 214 445 348 398 C493 348 610 438 742 389 C850 348 941 370 1045 340 L1045 572 L-40 572 Z" />
-          <path className="map-island" d="M355 465 C420 424 496 438 550 478 C484 520 400 522 329 489 Z" />
-          <g className="map-minor-roads">
-            <path d="M78 230 L935 181" /><path d="M112 326 L908 276" /><path d="M187 95 L825 505" />
-            <path d="M323 35 L370 438" /><path d="M526 28 L520 430" /><path d="M701 54 L665 411" />
-            <path d="M43 152 C250 172 410 109 596 138 C770 166 850 140 979 109" />
-            <path d="M59 360 C221 278 409 289 576 326 C743 363 872 323 978 250" />
-          </g>
-          <g className="map-major-roads">
-            <path d="M40 286 C223 247 335 263 482 230 C630 197 768 218 970 146" />
-            <path d="M246 36 C329 159 418 226 526 309 C618 380 725 422 877 498" />
-            <path d="M744 22 C685 130 617 218 545 294 C472 370 393 411 272 457" />
-          </g>
-          <g className="map-rail-lines">
-            <path d="M198 82 C338 188 414 228 515 286 C604 337 716 363 897 378" />
-            <path d="M534 27 C550 137 543 239 515 286 C488 335 437 376 354 420" />
-          </g>
-        </svg>
-        <div className="map-label map-label--altona">ALTONA</div>
-        <div className="map-label map-label--mitte">HAMBURG-MITTE</div>
-        <div className="map-label map-label--nord">NORD</div>
-        <div className="map-label map-label--elbe">ELBE</div>
-        {showBikes && plotted.map((station) => {
-          const { x, y } = projectCoordinate(station.longitude, station.latitude);
-          const size = Math.min(20, 7 + station.availableBikes * 0.55);
-          return (
-            <button
-              type="button"
-              className={`station-dot station-dot--${station.status}${selection?.kind === "bike" && selection.item.id === station.id ? " is-active" : ""}`}
-              key={station.id}
-              style={{ left: `${x}%`, top: `${y}%`, width: size, height: size }}
-              aria-label={`${station.name}: ${station.availableBikes} ${copy.map.bikes}, ${copy.status[station.status]}`}
-              title={`${station.name}\n${station.availableBikes} ${copy.map.bikes} · ${copy.status[station.status]}`}
-              onClick={() => onSelect({ kind: "bike", item: station })}
-            />
-          );
-        })}
-        {showTraffic && intelligenceSnapshot.trafficEvents.map((event) => {
-          const { x, y } = projectCoordinate(event.longitude, event.latitude);
-          return (
-            <button
-              type="button"
-              className={`traffic-marker traffic-marker--${event.status}${selection?.kind === "traffic" && selection.item.id === event.id ? " is-active" : ""}`}
-              key={event.id}
-              style={{ left: `${x}%`, top: `${y}%` }}
-              aria-label={`${event.title}: ${event.status}`}
-              title={`${event.title}\n${event.description}`}
-              onClick={() => onSelect({ kind: "traffic", item: event })}
-            ><span>!</span></button>
-          );
-        })}
-        {showTransit && intelligenceSnapshot.transitStops.map((stop) => {
-          const { x, y } = projectCoordinate(stop.longitude, stop.latitude);
-          return (
-            <button
-              type="button"
-              className={`transit-marker${selection?.kind === "transit" && selection.item.id === stop.id ? " is-active" : ""}`}
-              key={stop.id}
-              style={{ left: `${x}%`, top: `${y}%` }}
-              aria-label={`${stop.name}: ${stop.lines.join(", ")}`}
-              title={`${stop.name}\n${stop.lines.join(" · ")}`}
-              onClick={() => onSelect({ kind: "transit", item: stop })}
-            >H</button>
-          );
-        })}
-        <div className="map-scale"><span /> 2 KM</div>
-        <div className="map-count">{showBikes ? `${visible.length} ${copy.map.stationsInView}` : intelligenceCopy.map.officialLayers}</div>
-        {selection && (
-          <aside className="map-detail" aria-live="polite">
-            <button type="button" onClick={() => onSelect(null)} aria-label={intelligenceCopy.map.close}>×</button>
-            <span>{selection.kind === "bike" ? "STADTRAD" : selection.kind === "traffic" ? "POLIZEI HAMBURG" : "HVV"}</span>
-            <h3>{selectedTitle}</h3>
-            {selection.kind === "bike" && <p>{selection.item.availableBikes} {copy.map.bikes} · {copy.status[selection.item.status]} · {formatTime(selection.item.observedAt, copy.locale)}</p>}
-            {selection.kind === "traffic" && <p>{selection.item.description}</p>}
-            {selection.kind === "transit" && <p>{selection.item.lines.join(" · ")}<br />{selection.item.departures} {intelligenceCopy.map.departures}</p>}
-          </aside>
-        )}
-      </div>
-    </div>
   );
 }
 
@@ -485,7 +340,7 @@ export function MobilityDashboard({ initialData }: Props) {
               ))}
             </div>
           </div>
-          <NetworkMap
+          <HamburgMobilityMap
             stations={data.stations}
             status={status}
             copy={copy}

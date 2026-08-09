@@ -7,6 +7,7 @@
 ![Airflow](https://img.shields.io/badge/Airflow-orchestration-017CEE?logo=apacheairflow&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-cloud%20reference-844FBA?logo=terraform&logoColor=white)
 ![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-observability-111827?logo=opentelemetry&logoColor=white)
+![MapLibre](https://img.shields.io/badge/MapLibre-interactive%20vector%20map-396CB2?logo=openstreetmap&logoColor=white)
 ![Languages](https://img.shields.io/badge/UI-DE%20%7C%20EN%20%7C%20FR%20%7C%20AR-7C3AED)
 
 An end-to-end data engineering portfolio project that combines five official Hamburg SensorThings domains with current Polizei Hamburg traffic notices and HVV geodata. It delivers a reproducible historical lakehouse, explainable forecasts, operational alerts and a multilingual decision dashboard.
@@ -37,11 +38,13 @@ The source atlas makes scale, cadence, historical reach and ingestion strategy e
 
 [![Official source atlas](docs/screenshots/dashboard-de-sources-v2.jpg)](docs/screenshots/dashboard-de-sources-v2.jpg)
 
-### 2. A bright, multi-layer Hamburg map
+### 2. A professional, geographic Hamburg map
 
-The redesigned map uses a light, legible basemap with the Elbe, roads and rail corridors. Reviewers can isolate StadtRAD, traffic or HVV layers, click a marker and inspect the official detail without leaving the dashboard.
+The dashboard now uses MapLibre GL with OpenStreetMap/OpenFreeMap vector tiles instead of a decorative SVG. It opens on the full Hamburg extent and supports wheel, touch and button zoom, drag-to-pan, fullscreen, geolocation, a metric scale and dynamic point clustering. All **359 currently valid station locations** are rendered from the official `[longitude, latitude]` values; no screen-coordinate approximation or 220-point display limit remains. Reviewers can isolate StadtRAD, traffic or HVV and inspect precise coordinates.
 
-[![Interactive Hamburg mobility map](docs/screenshots/dashboard-de-network-v2.jpg)](docs/screenshots/dashboard-de-network-v2.jpg)
+[![Full interactive Hamburg mobility map](docs/screenshots/dashboard-de-network-v3.png)](docs/screenshots/dashboard-de-network-v3.png)
+
+[![Hamburg station clusters at neighbourhood zoom](docs/screenshots/dashboard-de-network-zoom-v3.png)](docs/screenshots/dashboard-de-network-zoom-v3.png)
 
 ### 3. Explainable forecasting and historical exploration
 
@@ -91,11 +94,15 @@ German is the default. The language switcher also provides English, French and A
   <img src="docs/screenshots/dashboard-mobile-de-v2.jpg" alt="German mobile dashboard" width="390">
 </a>
 
+<a href="docs/screenshots/dashboard-mobile-map-de-v3.png">
+  <img src="docs/screenshots/dashboard-mobile-map-de-v3.png" alt="Interactive Hamburg map on mobile" width="390">
+</a>
+
 ## How a recruiter can review it in five minutes
 
 1. Open the dashboard and use `DE / EN / FR / AR` in the header.
 2. Review **Quellen** to compare the five historical SensorThings domains.
-3. Open **Netzwerk** and switch between StadtRAD, Polizei traffic and HVV layers.
+3. Open **Netzwerk**, zoom and pan across Hamburg, then switch between StadtRAD, Polizei traffic and HVV layers.
 4. Use **Intelligenz** for the forecast, back-test and historical explorer.
 5. Check **Betrieb** for alerts, the CO₂ scenario and the explainable model card.
 6. Finish with **Pipeline** and **Lineage** to understand observability and cloud readiness.

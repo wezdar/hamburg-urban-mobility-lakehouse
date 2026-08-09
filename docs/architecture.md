@@ -26,6 +26,7 @@ Bronze files are immutable and replayable. Silver Parquet files are deduplicated
 - Data-contract checks fail the scheduled job on missing keys, duplicates, invalid timestamps or negative bike counts.
 - The dashboard keeps a recent verified snapshot if the live API is temporarily unavailable.
 - WFS traffic and HVV features are normalized into a small versioned display contract.
+- MapLibre consumes the official longitude/latitude pairs as GeoJSON, clusters them below street-level zoom and never converts them to fixed screen percentages.
 - The availability forecast uses a documented moving-average baseline and reports holdout MAE.
 - Operational alerts are deterministic rules over station states and police closures.
 - CO₂ is labelled as a scenario estimate and preserves its distance and emission assumptions.
@@ -44,7 +45,7 @@ Bronze files are immutable and replayable. Silver Parquet files are deduplicated
                   → DuckDB + dbt → live API → multilingual dashboard
 ```
 
-The dashboard exposes the same lineage that exists in the repository. The two WFS layers are operational snapshots; the 84,191-stream total remains an exact SensorThings catalogue count. Historical explorer values are capacity calculations based on documented coverage and cadence, not fabricated observations.
+The dashboard exposes the same lineage that exists in the repository. The two WFS layers are operational snapshots; the 84,191-stream total remains an exact SensorThings catalogue count. Historical explorer values are capacity calculations based on documented coverage and cadence, not fabricated observations. The geographic product uses a MapLibre vector basemap and inline GeoJSON sources, so pan, zoom, clustering and viewport filtering operate on real coordinates rather than presentation-layer approximations.
 
 ## Cloud migration path
 

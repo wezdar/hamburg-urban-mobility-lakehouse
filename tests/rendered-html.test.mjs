@@ -22,7 +22,8 @@ test("server-renders the Hamburg mobility product", async () => {
   assert.match(html, /Mobilität,/);
   assert.match(html, /Offizielles Datenuniversum/);
   assert.match(html, /StadtRAD live/);
-  assert.match(html, /Helle, interaktive Hamburg-Karte/);
+  assert.match(html, /Interaktive Vektorkarte von ganz Hamburg/);
+  assert.match(html, /Hamburg-Karte wird geladen/);
   assert.match(html, /12-Stunden-Verfügbarkeitsprognose/);
   assert.match(html, /Historischer Explorer/);
   assert.match(html, /Anomalien, Wirkung und Modellgüte/);
@@ -48,6 +49,22 @@ test("committed official urban layers have recruiter-visible scale and provenanc
   assert.equal(payload.provenance.traffic.license, "DL-DE-BY-2.0");
   assert.equal(payload.provenance.transit.license, "DL-DE-BY-2.0");
   assert.equal(payload.emissionsModel.avoidedCarKgPerKm, 0.148);
+});
+
+test("committed StadtRAD stations retain official geographic coordinates", async () => {
+  const dashboard = await import("../app/data/dashboard.json", { with: { type: "json" } });
+  const stations = dashboard.default.stations;
+  assert.ok(stations.length >= 300);
+  assert.ok(stations.every((station) => Number.isFinite(station.latitude) && Number.isFinite(station.longitude)));
+  const tiefstack = stations.find((station) => station.id === 17301);
+  assert.deepEqual(
+    { latitude: tiefstack?.latitude, longitude: tiefstack?.longitude },
+    { latitude: 53.5306, longitude: 10.06528 },
+  );
+  assert.ok(Math.min(...stations.map((station) => station.latitude)) < 53.48);
+  assert.ok(Math.max(...stations.map((station) => station.latitude)) > 53.67);
+  assert.ok(Math.min(...stations.map((station) => station.longitude)) < 9.80);
+  assert.ok(Math.max(...stations.map((station) => station.longitude)) > 10.20);
 });
 
 test("live endpoint always returns a usable payload", async () => {

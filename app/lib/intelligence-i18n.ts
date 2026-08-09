@@ -13,6 +13,11 @@ type IntelligenceCopy = {
     departures: string;
     lines: string;
     officialLayers: string;
+    loading: string;
+    unavailable: string;
+    resetView: string;
+    zoom: string;
+    coordinates: string;
   };
   intelligence: {
     eyebrow: string;
@@ -71,8 +76,10 @@ export const intelligenceTranslations: Record<Language, IntelligenceCopy> = {
     nav: { intelligence: "Intelligenz", operations: "Betrieb" },
     map: {
       layers: "Kartenebenen", bikes: "StadtRAD", traffic: "Verkehr", transit: "HVV", all: "Alle",
-      clearTitle: "Helle, interaktive Hamburg-Karte", close: "Details schließen",
-      departures: "Abfahrten", lines: "Linien", officialLayers: "2 offizielle Geo-Ebenen",
+      clearTitle: "Interaktive Vektorkarte von ganz Hamburg", close: "Details schließen",
+      departures: "Abfahrten", lines: "Linien", officialLayers: "3 geocodierte Mobilitätsebenen",
+      loading: "Hamburg-Karte wird geladen", unavailable: "Die Kartenebene ist momentan nicht erreichbar.",
+      resetView: "Ganz Hamburg", zoom: "Zoom", coordinates: "Offizielle Koordinaten",
     },
     intelligence: {
       eyebrow: "Prädiktive Mobilität", title: "Stadt verstehen.", accent: "Bevor sie reagiert.",
@@ -102,8 +109,10 @@ export const intelligenceTranslations: Record<Language, IntelligenceCopy> = {
     nav: { intelligence: "Intelligence", operations: "Operations" },
     map: {
       layers: "Map layers", bikes: "StadtRAD", traffic: "Traffic", transit: "HVV", all: "All",
-      clearTitle: "Bright, interactive Hamburg map", close: "Close details",
-      departures: "departures", lines: "lines", officialLayers: "2 official geospatial layers",
+      clearTitle: "Interactive vector map of greater Hamburg", close: "Close details",
+      departures: "departures", lines: "lines", officialLayers: "3 geocoded mobility layers",
+      loading: "Loading the Hamburg map", unavailable: "The basemap is temporarily unavailable.",
+      resetView: "All Hamburg", zoom: "Zoom", coordinates: "Official coordinates",
     },
     intelligence: {
       eyebrow: "Predictive mobility", title: "Understand the city.", accent: "Before it reacts.",
@@ -133,8 +142,10 @@ export const intelligenceTranslations: Record<Language, IntelligenceCopy> = {
     nav: { intelligence: "Intelligence", operations: "Opérations" },
     map: {
       layers: "Couches cartographiques", bikes: "StadtRAD", traffic: "Trafic", transit: "HVV", all: "Toutes",
-      clearTitle: "Carte claire et interactive de Hambourg", close: "Fermer les détails",
-      departures: "départs", lines: "lignes", officialLayers: "2 couches géographiques officielles",
+      clearTitle: "Carte vectorielle interactive du Grand Hambourg", close: "Fermer les détails",
+      departures: "départs", lines: "lignes", officialLayers: "3 couches de mobilité géocodées",
+      loading: "Chargement de la carte de Hambourg", unavailable: "Le fond de carte est temporairement indisponible.",
+      resetView: "Tout Hambourg", zoom: "Zoom", coordinates: "Coordonnées officielles",
     },
     intelligence: {
       eyebrow: "Mobilité prédictive", title: "Comprendre la ville.", accent: "Avant qu'elle ne réagisse.",
@@ -164,8 +175,10 @@ export const intelligenceTranslations: Record<Language, IntelligenceCopy> = {
     nav: { intelligence: "الذكاء", operations: "العمليات" },
     map: {
       layers: "طبقات الخريطة", bikes: "StadtRAD", traffic: "المرور", transit: "HVV", all: "الكل",
-      clearTitle: "خريطة هامبورغ واضحة وتفاعلية", close: "إغلاق التفاصيل",
-      departures: "رحلة", lines: "خطوط", officialLayers: "طبقتان جغرافيتان رسميتان",
+      clearTitle: "خريطة متجهة تفاعلية لهامبورغ الكبرى", close: "إغلاق التفاصيل",
+      departures: "رحلة", lines: "خطوط", officialLayers: "3 طبقات تنقل محددة جغرافيًا",
+      loading: "جارٍ تحميل خريطة هامبورغ", unavailable: "خلفية الخريطة غير متاحة مؤقتًا.",
+      resetView: "هامبورغ كاملة", zoom: "التكبير", coordinates: "الإحداثيات الرسمية",
     },
     intelligence: {
       eyebrow: "تنقل تنبؤي", title: "فهم المدينة.", accent: "قبل أن تتفاعل.",
