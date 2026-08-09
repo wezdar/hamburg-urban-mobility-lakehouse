@@ -12,7 +12,7 @@
 
 An end-to-end data engineering portfolio project that combines five official Hamburg SensorThings domains with current Polizei Hamburg traffic notices and HVV geodata. It delivers a reproducible historical lakehouse, explainable forecasts, operational alerts and a multilingual decision dashboard.
 
-[![German dashboard overview](docs/screenshots/dashboard-de-overview-v2.jpg)](docs/screenshots/dashboard-de-overview-v2.jpg)
+[![German production dashboard overview](docs/screenshots/dashboard-de-overview-v4.png)](docs/screenshots/dashboard-de-overview-v4.png)
 
 > Click any dashboard image to open the full-resolution version.
 
@@ -32,45 +32,51 @@ The full history is generated outside Git because it can exceed **459 million sc
 
 ## Product tour
 
-### 1. One catalogue for the official mobility universe
+### 1. A production-ready analytics workspace
+
+The interface uses a restrained product design system: a persistent section-aware sidebar, a compact utility header, neutral surfaces, Hamburg-red highlights and a dedicated teal data color. Typography, spacing, controls, cards and charts share one visual language across desktop, laptop, tablet, mobile and RTL layouts. The map and decision KPIs appear in the first working viewport instead of being buried beneath decorative content.
+
+[![Professional German analytics workspace](docs/screenshots/dashboard-de-overview-v4.png)](docs/screenshots/dashboard-de-overview-v4.png)
+
+### 2. One catalogue for the official mobility universe
 
 The source atlas makes scale, cadence, historical reach and ingestion strategy explicit for every domain.
 
-[![Official source atlas](docs/screenshots/dashboard-de-sources-v2.jpg)](docs/screenshots/dashboard-de-sources-v2.jpg)
+[![Official source atlas](docs/screenshots/dashboard-de-sources-v4.png)](docs/screenshots/dashboard-de-sources-v4.png)
 
-### 2. A professional, geographic Hamburg map
+### 3. A professional, geographic Hamburg map
 
 The dashboard now uses MapLibre GL with OpenStreetMap/OpenFreeMap vector tiles instead of a decorative SVG. It opens on the full Hamburg extent and supports wheel, touch and button zoom, drag-to-pan, fullscreen, geolocation, a metric scale and dynamic point clustering. All **359 currently valid station locations** are rendered from the official `[longitude, latitude]` values; no screen-coordinate approximation or 220-point display limit remains. Reviewers can isolate StadtRAD, traffic or HVV and inspect precise coordinates.
 
-[![Full interactive Hamburg mobility map](docs/screenshots/dashboard-de-network-v3.png)](docs/screenshots/dashboard-de-network-v3.png)
+[![Full interactive Hamburg mobility map](docs/screenshots/dashboard-de-network-v4.png)](docs/screenshots/dashboard-de-network-v4.png)
 
-[![Hamburg station clusters at neighbourhood zoom](docs/screenshots/dashboard-de-network-zoom-v3.png)](docs/screenshots/dashboard-de-network-zoom-v3.png)
+[![Hamburg station clusters at neighbourhood zoom](docs/screenshots/dashboard-de-network-zoom-v4.png)](docs/screenshots/dashboard-de-network-zoom-v4.png)
 
-### 3. Explainable forecasting and historical exploration
+### 4. Explainable forecasting and historical exploration
 
 The 12-hour forecast is a transparent rolling baseline with a displayed back-test MAE and confidence indicator. The year explorer calculates source availability and scheduled capacity from real catalogue coverage; it never invents historical measurements.
 
-[![Predictive mobility and history](docs/screenshots/dashboard-de-intelligence.jpg)](docs/screenshots/dashboard-de-intelligence.jpg)
+[![Predictive mobility and history](docs/screenshots/dashboard-de-intelligence-v4.png)](docs/screenshots/dashboard-de-intelligence-v4.png)
 
-### 4. Operations, anomalies and environmental impact
+### 5. Operations, anomalies and environmental impact
 
 Empty or stale stations and official road closures become prioritised alerts. The CO₂ card is explicitly a scenario based on visible assumptions, while the model card exposes method, holdout size and error.
 
-[![Operations and sustainability](docs/screenshots/dashboard-de-operations.jpg)](docs/screenshots/dashboard-de-operations.jpg)
+[![Operations and sustainability](docs/screenshots/dashboard-de-operations-v4.png)](docs/screenshots/dashboard-de-operations-v4.png)
 
-### 5. Data quality that is visible, not implied
+### 6. Data quality that is visible, not implied
 
 The dashboard exposes freshness, completeness, validity, uniqueness and the data contract used by the pipeline.
 
-[![Data quality and contract](docs/screenshots/dashboard-de-quality-v2.jpg)](docs/screenshots/dashboard-de-quality-v2.jpg)
+[![Data quality and contract](docs/screenshots/dashboard-de-quality-v4.png)](docs/screenshots/dashboard-de-quality-v4.png)
 
-### 6. Recruiter-readable architecture and lineage
+### 7. Recruiter-readable architecture and lineage
 
 The architecture screen connects source APIs to immutable bronze files, Parquet silver data, DuckDB, dbt marts and the product layer.
 
-[![Lakehouse pipeline](docs/screenshots/dashboard-de-pipeline-v2.jpg)](docs/screenshots/dashboard-de-pipeline-v2.jpg)
+[![Lakehouse pipeline](docs/screenshots/dashboard-de-pipeline-v4.png)](docs/screenshots/dashboard-de-pipeline-v4.png)
 
-[![Data lineage and cloud readiness](docs/screenshots/dashboard-de-lineage.jpg)](docs/screenshots/dashboard-de-lineage.jpg)
+[![Data lineage and cloud readiness](docs/screenshots/dashboard-de-lineage-v4.png)](docs/screenshots/dashboard-de-lineage-v4.png)
 
 ## Multilingual and responsive UI
 
@@ -78,34 +84,36 @@ German is the default. The language switcher also provides English, French and A
 
 ### English
 
-[![English dashboard](docs/screenshots/dashboard-en-overview-v2.jpg)](docs/screenshots/dashboard-en-overview-v2.jpg)
+[![English dashboard](docs/screenshots/dashboard-en-overview-v4.png)](docs/screenshots/dashboard-en-overview-v4.png)
 
 ### French
 
-[![French dashboard](docs/screenshots/dashboard-fr-overview-v2.jpg)](docs/screenshots/dashboard-fr-overview-v2.jpg)
+[![French dashboard](docs/screenshots/dashboard-fr-overview-v4.png)](docs/screenshots/dashboard-fr-overview-v4.png)
 
 ### Arabic with right-to-left layout
 
-[![Arabic RTL dashboard](docs/screenshots/dashboard-ar-overview-v2.jpg)](docs/screenshots/dashboard-ar-overview-v2.jpg)
+[![Arabic RTL dashboard](docs/screenshots/dashboard-ar-overview-v4.png)](docs/screenshots/dashboard-ar-overview-v4.png)
 
-### Mobile
+### Tablet and mobile
 
-<a href="docs/screenshots/dashboard-mobile-de-v2.jpg">
-  <img src="docs/screenshots/dashboard-mobile-de-v2.jpg" alt="German mobile dashboard" width="390">
+[![German tablet dashboard](docs/screenshots/dashboard-tablet-de-v4.png)](docs/screenshots/dashboard-tablet-de-v4.png)
+
+<a href="docs/screenshots/dashboard-mobile-de-v4.png">
+  <img src="docs/screenshots/dashboard-mobile-de-v4.png" alt="German mobile dashboard" width="390">
 </a>
 
-<a href="docs/screenshots/dashboard-mobile-map-de-v3.png">
-  <img src="docs/screenshots/dashboard-mobile-map-de-v3.png" alt="Interactive Hamburg map on mobile" width="390">
+<a href="docs/screenshots/dashboard-mobile-map-de-v4.png">
+  <img src="docs/screenshots/dashboard-mobile-map-de-v4.png" alt="Interactive Hamburg map on mobile" width="390">
 </a>
 
 ## How a recruiter can review it in five minutes
 
-1. Open the dashboard and use `DE / EN / FR / AR` in the header.
-2. Review **Quellen** to compare the five historical SensorThings domains.
-3. Open **Netzwerk**, zoom and pan across Hamburg, then switch between StadtRAD, Polizei traffic and HVV layers.
+1. Start in **Übersicht** and use `DE / EN / FR / AR` in the utility header.
+2. Use the sidebar to open **Netzwerk**, zoom and pan across Hamburg, then switch between StadtRAD, Polizei traffic and HVV layers.
+3. Review **Quellen** to compare the five historical SensorThings domains.
 4. Use **Intelligenz** for the forecast, back-test and historical explorer.
 5. Check **Betrieb** for alerts, the CO₂ scenario and the explainable model card.
-6. Finish with **Pipeline** and **Lineage** to understand observability and cloud readiness.
+6. Finish with **Pipeline** and **Lineage** to understand observability and cloud readiness. The active sidebar state follows the current section.
 7. Read the [English illustrated project report](output/pdf/elbeflow-project-report.pdf) for a screen-by-screen walkthrough.
 
 For exact review commands and the distinction between measured, estimated and modelled values, use the dedicated [recruiter guide](docs/RECRUITER_GUIDE.md).

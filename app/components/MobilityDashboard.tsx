@@ -135,7 +135,7 @@ function SourceAtlas({ sources, copy }: { sources: MobilitySource[]; copy: Trans
     <section className="source-atlas" id="sources">
       <div className="source-atlas__heading">
         <div>
-          <div className="eyebrow"><span>02</span> {copy.atlas.eyebrow}</div>
+          <div className="eyebrow"><span>04</span> {copy.atlas.eyebrow}</div>
           <h2>{copy.atlas.title}<br /><em>{copy.atlas.accent}</em></h2>
         </div>
         <p>{copy.atlas.description}</p>
@@ -197,6 +197,7 @@ export function MobilityDashboard({ initialData }: Props) {
   const [mapLayer, setMapLayer] = useState<MapLayer>("all");
   const [mapSelection, setMapSelection] = useState<MapSelection>(null);
   const [historyYear, setHistoryYear] = useState(2026);
+  const [activeSection, setActiveSection] = useState("overview");
   const copy = translations[language];
   const intelligenceCopy = intelligenceTranslations[language];
 
@@ -218,6 +219,24 @@ export function MobilityDashboard({ initialData }: Props) {
       })
       .catch(() => setLiveState("snapshot"));
     return () => controller.abort();
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = ["overview", "network", "sources", "intelligence", "operations", "pipeline"];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible?.target.id) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-18% 0px -68%", threshold: [0, 0.1, 0.35] },
+    );
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+    return () => observer.disconnect();
   }, []);
 
   const topStations = useMemo(
@@ -261,22 +280,52 @@ export function MobilityDashboard({ initialData }: Props) {
     * intelligenceSnapshot.emissionsModel.assumedTripKm
     * intelligenceSnapshot.emissionsModel.avoidedCarKgPerKm;
   const forecastMax = Math.max(...forecast.points.map((point) => point.value), 1);
+  const activeLabel = activeSection === "network"
+    ? copy.nav.network
+    : activeSection === "sources"
+      ? copy.nav.sources
+      : activeSection === "intelligence"
+        ? intelligenceCopy.nav.intelligence
+        : activeSection === "operations"
+          ? intelligenceCopy.nav.operations
+          : activeSection === "pipeline"
+            ? copy.nav.pipeline
+            : copy.nav.overview;
 
   return (
     <main className="dashboard-shell" data-language={language} dir={copy.direction}>
-      <header className="topbar">
+      <aside className="app-sidebar" aria-label={copy.navLabel}>
         <a className="brand" href="#overview" aria-label={copy.brandLabel}>
           <span className="brand__mark"><i /><i /><i /></span>
           <span><b>ELBE</b>FLOW</span>
         </a>
-        <nav aria-label={copy.navLabel}>
-          <a className="is-active" href="#overview">{copy.nav.overview}</a>
-          <a href="#sources">{copy.nav.sources}</a>
-          <a href="#network">{copy.nav.network}</a>
-          <a href="#intelligence">{intelligenceCopy.nav.intelligence}</a>
-          <a href="#operations">{intelligenceCopy.nav.operations}</a>
-          <a href="#pipeline">{copy.nav.pipeline}</a>
+        <div className="sidebar__product">
+          <span>Hamburg</span>
+          <strong>Urban Mobility Lakehouse</strong>
+        </div>
+        <nav>
+          <a className={activeSection === "overview" ? "is-active" : ""} href="#overview" aria-current={activeSection === "overview" ? "location" : undefined}><span>01</span>{copy.nav.overview}</a>
+          <a className={activeSection === "network" ? "is-active" : ""} href="#network" aria-current={activeSection === "network" ? "location" : undefined}><span>02</span>{copy.nav.network}</a>
+          <a className={activeSection === "sources" ? "is-active" : ""} href="#sources" aria-current={activeSection === "sources" ? "location" : undefined}><span>03</span>{copy.nav.sources}</a>
+          <a className={activeSection === "intelligence" ? "is-active" : ""} href="#intelligence" aria-current={activeSection === "intelligence" ? "location" : undefined}><span>04</span>{intelligenceCopy.nav.intelligence}</a>
+          <a className={activeSection === "operations" ? "is-active" : ""} href="#operations" aria-current={activeSection === "operations" ? "location" : undefined}><span>05</span>{intelligenceCopy.nav.operations}</a>
+          <a className={activeSection === "pipeline" ? "is-active" : ""} href="#pipeline" aria-current={activeSection === "pipeline" ? "location" : undefined}><span>06</span>{copy.nav.pipeline}</a>
         </nav>
+        <div className="sidebar__meta">
+          <span className={liveState === "live" ? "pulse" : ""} />
+          <div>
+            <strong>{liveState === "live" ? copy.live.live : liveState === "connecting" ? copy.live.connecting : copy.live.snapshot}</strong>
+            <small>Hamburg Urban Data Platform</small>
+          </div>
+        </div>
+      </aside>
+
+      <div className="app-content">
+      <header className="topbar">
+        <div className="topbar__context">
+          <span>Hamburg / Mobility Intelligence</span>
+          <strong>{activeLabel}</strong>
+        </div>
         <div className="topbar__actions">
           <div className="language-switcher" role="group" aria-label={copy.languageSelector}>
             {languageOptions.map((option) => (
@@ -322,17 +371,17 @@ export function MobilityDashboard({ initialData }: Props) {
         <MetricCard label={copy.metrics.coverage} value={`${coverageYears}Y`} note={interpolate(copy.metrics.coverageNote, { year: formatYear(data.universe.earliestObservation) })} />
       </section>
 
-      <SourceAtlas sources={data.catalog} copy={copy} />
-
       <section className="dashboard-grid" id="network">
         <article className="panel panel--map">
           <div className="panel__header">
-            <div><span className="section-number">03</span><h2>{copy.map.title}</h2></div>
+            <div><span className="section-number">02</span><h2>{copy.map.title}</h2></div>
             <div className="filter-group" aria-label={copy.map.filterAria}>
               {(["all", "healthy", "low", "empty"] as StatusFilter[]).map((value) => (
                 <button
                   key={value}
+                  type="button"
                   className={status === value ? "is-selected" : ""}
+                  aria-pressed={status === value}
                   onClick={() => setStatus(value)}
                 >
                   {copy.status[value]}
@@ -360,7 +409,7 @@ export function MobilityDashboard({ initialData }: Props) {
 
         <article className="panel panel--ranking">
           <div className="panel__header">
-            <div><span className="section-number">04</span><h2>{copy.ranking.title}</h2></div>
+            <div><span className="section-number">03</span><h2>{copy.ranking.title}</h2></div>
             <span className="panel__hint" dir="ltr">{formatNumber(data.metrics.availableBikes, copy.locale)} {copy.ranking.bikes} · {freshnessLabel(latest, data.generatedAt, copy)}</span>
           </div>
           <ol className="station-list">
@@ -378,13 +427,15 @@ export function MobilityDashboard({ initialData }: Props) {
         </article>
       </section>
 
+      <SourceAtlas sources={data.catalog} copy={copy} />
+
       <section className="lower-grid">
         <article className="panel panel--chart">
           <div className="panel__header">
             <div><span className="section-number">05</span><h2>{copy.chart.title}</h2></div>
             <div className="range-switcher" aria-label={copy.chart.rangeAria}>
               {(["6H", "12H", "24H"] as Range[]).map((value) => (
-                <button key={value} className={range === value ? "is-selected" : ""} onClick={() => setRange(value)}>{value}</button>
+                <button key={value} type="button" className={range === value ? "is-selected" : ""} aria-pressed={range === value} onClick={() => setRange(value)}>{value}</button>
               ))}
             </div>
           </div>
@@ -505,7 +556,7 @@ export function MobilityDashboard({ initialData }: Props) {
 
       <section className="pipeline" id="pipeline">
         <div className="pipeline__intro">
-          <div className="eyebrow"><span>07</span> {copy.pipeline.eyebrow}</div>
+          <div className="eyebrow"><span>09</span> {copy.pipeline.eyebrow}</div>
           <h2>{copy.pipeline.title}<br /><em>{copy.pipeline.accent}</em></h2>
           <p>{copy.pipeline.description}</p>
         </div>
@@ -555,6 +606,7 @@ export function MobilityDashboard({ initialData }: Props) {
         <p>{copy.footer.builtWith}</p>
         <div><a href={data.source.url} target="_blank" rel="noreferrer">{copy.footer.dataSource}</a><span>{data.source.license}</span></div>
       </footer>
+      </div>
     </main>
   );
 }

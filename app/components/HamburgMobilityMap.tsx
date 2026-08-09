@@ -360,7 +360,7 @@ export function HamburgMobilityMap({
         </div>
         <div className="map-layer-switcher" role="group" aria-label={intelligenceCopy.map.layers}>
           {(["bikes", "traffic", "transit", "all"] as MapLayer[]).map((value) => (
-            <button key={value} type="button" className={layer === value ? "is-selected" : ""} onClick={() => onLayerChange(value)}>
+            <button key={value} type="button" className={layer === value ? "is-selected" : ""} aria-pressed={layer === value} onClick={() => onLayerChange(value)}>
               {intelligenceCopy.map[value]}
             </button>
           ))}

@@ -7,6 +7,7 @@ The generated PDF is intentionally reproducible from repository assets only.
 
 from __future__ import annotations
 
+from io import BytesIO
 from pathlib import Path
 
 from PIL import Image
@@ -141,8 +142,11 @@ def draw_screenshot(
     anchor: str = "center",
 ) -> None:
     path = SCREENSHOTS / filename
+    pdf_image = BytesIO()
     with Image.open(path) as image:
         source_w, source_h = image.size
+        image.convert("RGB").save(pdf_image, "JPEG", quality=92, optimize=True, progressive=True)
+    pdf_image.seek(0)
     scale = min(width / source_w, height / source_h)
     rendered_w = source_w * scale
     rendered_h = source_h * scale
@@ -159,7 +163,7 @@ def draw_screenshot(
     clip.roundRect(image_x, image_y, rendered_w, rendered_h, 5)
     canvas.clipPath(clip, stroke=0, fill=0)
     canvas.drawImage(
-        ImageReader(str(path)),
+        ImageReader(pdf_image),
         image_x,
         image_y,
         rendered_w,
@@ -238,7 +242,7 @@ def build_report() -> None:
     canvas.drawString(44, PAGE_H - 185, "Hamburg Urban Mobility Lakehouse")
     canvas.setFillColor(HexColor("#C7E4E0"))
     canvas.setFont(FONT, 14)
-    canvas.drawString(46, PAGE_H - 218, "Seven official urban layers, explainable analytics and a multilingual decision product")
+    canvas.drawString(46, PAGE_H - 218, "Seven official urban layers, explainable analytics and a production-grade multilingual workspace")
 
     metrics = [
         ("84,191", "official streams"),
@@ -260,7 +264,7 @@ def build_report() -> None:
 
     canvas.setFillColor(WHITE)
     canvas.setFont(FONT_BOLD, 11)
-    canvas.drawString(46, 165, "PYTHON · PARQUET · DUCKDB · DBT · REACT · MAPLIBRE · TERRAFORM · OTEL")
+    canvas.drawString(46, 165, "PYTHON · PARQUET · DUCKDB · DBT · REACT · MAPLIBRE · DESIGN SYSTEM · OTEL")
     canvas.setFillColor(HexColor("#BBD7D4"))
     canvas.setFont(FONT, 9)
     canvas.drawString(46, 140, "German by default · English · French · Arabic with right-to-left layout")
@@ -332,25 +336,25 @@ def build_report() -> None:
     screenshot_page(
         canvas,
         3,
-        "Executive dashboard",
+        "Production analytics workspace",
         "German is the default experience for the Hamburg target market.",
-        "dashboard-de-overview-v2.jpg",
-        "Scale in seconds",
-        "The opening view gives reviewers immediate evidence of the project’s size, source diversity and reproducibility.",
+        "dashboard-de-overview-v4.png",
+        "Decision hierarchy",
+        "A persistent sidebar, compact utility header and restrained design system put live network evidence ahead of decorative content.",
         [
             "84,191 exact SensorThings streams",
             "~459 million scheduled records",
             "102,994 verified real sample rows",
-            "Seven official Hamburg data layers",
+            "Section-aware navigation and consistent controls",
         ],
-        "Figure 1 — Default German overview with live-status indicator and headline metrics.",
+        "Figure 1 — Production German workspace with live state, headline metrics and the Hamburg network in the first viewport.",
     )
     screenshot_page(
         canvas,
         4,
         "Official source atlas",
         "A single catalogue explains five very different operational datasets.",
-        "dashboard-de-sources-v2.jpg",
+        "dashboard-de-sources-v4.png",
         "Source diversity",
         "Each card communicates ownership, cadence, historical coverage, stream count and ingestion behavior.",
         [
@@ -366,7 +370,7 @@ def build_report() -> None:
         5,
         "Professional geographic city map",
         "A MapLibre vector map turns official traffic, HVV and StadtRAD coordinates into a real spatial product.",
-        "dashboard-de-network-v3.png",
+        "dashboard-de-network-v4.png",
         "Coordinate integrity",
         "The map covers the full Hamburg operating area and keeps every point anchored to its official longitude and latitude while users pan, zoom and inspect layers.",
         [
@@ -382,7 +386,7 @@ def build_report() -> None:
         6,
         "Predictive mobility",
         "Forecasts remain explainable, back-tested and explicit about uncertainty.",
-        "dashboard-de-intelligence.jpg",
+        "dashboard-de-intelligence-v4.png",
         "No black-box claims",
         "A rolling baseline produces a 12-hour availability outlook, while the historical explorer shows reproducible source coverage rather than invented observations.",
         [
@@ -398,7 +402,7 @@ def build_report() -> None:
         7,
         "Operations and sustainability",
         "Rule-based alerts, scenario impact and model quality share one decision surface.",
-        "dashboard-de-operations.jpg",
+        "dashboard-de-operations-v4.png",
         "Operational honesty",
         "Alerts come directly from station states and police closures. CO2 is clearly labelled as a scenario estimate, never a measured emission.",
         [
@@ -414,7 +418,7 @@ def build_report() -> None:
         8,
         "Quality and data contract",
         "Reliability is presented as measurable product behavior.",
-        "dashboard-de-quality-v2.jpg",
+        "dashboard-de-quality-v4.png",
         "Trust is visible",
         "Freshness, completeness, validity and uniqueness are shown beside the rules that protect downstream analytics.",
         [
@@ -430,7 +434,7 @@ def build_report() -> None:
         9,
         "Lakehouse architecture",
         "The dashboard explains how the repository turns APIs into analytics.",
-        "dashboard-de-pipeline-v2.jpg",
+        "dashboard-de-pipeline-v4.png",
         "End-to-end ownership",
         "The architecture view connects ingestion, object storage, analytical modeling, orchestration and delivery.",
         [
@@ -446,7 +450,7 @@ def build_report() -> None:
         10,
         "Lineage, observability and cloud",
         "Every metric is connected from source to product and to a concrete deployment path.",
-        "dashboard-de-lineage.jpg",
+        "dashboard-de-lineage-v4.png",
         "Production readiness",
         "The visible lineage is backed by repository assets for containers, Terraform, OpenTelemetry and GitHub Actions validation.",
         [
@@ -462,7 +466,7 @@ def build_report() -> None:
         11,
         "English interface",
         "The full product can be evaluated by an international hiring team.",
-        "dashboard-en-overview-v2.jpg",
+        "dashboard-en-overview-v4.png",
         "International review",
         "English localization covers navigation, source metadata, operational labels, quality explanations and formatting.",
         [
@@ -478,7 +482,7 @@ def build_report() -> None:
         12,
         "French interface",
         "Localization is implemented at the product layer, not as a static mock-up.",
-        "dashboard-fr-overview-v2.jpg",
+        "dashboard-fr-overview-v4.png",
         "Consistent semantics",
         "French users receive translated labels and explanations while every metric remains sourced from the same typed dataset.",
         [
@@ -494,7 +498,7 @@ def build_report() -> None:
         13,
         "Arabic right-to-left interface",
         "The application changes both language and document direction.",
-        "dashboard-ar-overview-v2.jpg",
+        "dashboard-ar-overview-v4.png",
         "Real RTL behavior",
         "Arabic is not only translated: navigation, hierarchy, alignment and reading flow are mirrored for right-to-left use.",
         [
@@ -506,26 +510,61 @@ def build_report() -> None:
         "Figure 11 — Arabic overview with genuine RTL layout behavior.",
     )
 
-    # 14 · Mobile screenshot needs a portrait-specific composition.
-    page_background(canvas, 14, "Responsive delivery")
-    title(canvas, "Mobile map experience", "The same geographic product remains usable on a 390 × 844 viewport.")
-    draw_screenshot(canvas, "dashboard-mobile-map-de-v3.png", 52, 58, 270, 430, anchor="top")
-    rounded_card(canvas, 360, 98, 430, 338)
+    screenshot_page(
+        canvas,
+        14,
+        "Street-level geographic exploration",
+        "Clusters expand into anchored station markers as the reviewer zooms into Hamburg.",
+        "dashboard-de-network-zoom-v4.png",
+        "Real spatial behavior",
+        "The basemap, clusters and individual mobility markers stay geographically aligned while the view changes from city scale to neighbourhood detail.",
+        [
+            "Smooth wheel, touch and button zoom",
+            "Zoom-dependent clusters and marker radii",
+            "Precise official longitude and latitude",
+            "Persistent layer, status and reset controls",
+        ],
+        "Figure 12 — Hamburg network at neighbourhood zoom in the production dashboard shell.",
+    )
+
+    screenshot_page(
+        canvas,
+        15,
+        "Tablet delivery",
+        "The analytical hierarchy adapts without changing product semantics.",
+        "dashboard-tablet-de-v4.png",
+        "One coherent product",
+        "At 768 × 1024 the navigation becomes horizontal, KPI cards use two columns and the map keeps its complete interaction surface.",
+        [
+            "No horizontal document overflow",
+            "Readable 14 px body typography",
+            "Two-column KPI and source layouts",
+            "Touch-ready navigation and controls",
+        ],
+        "Figure 13 — German tablet overview with the shared production design system.",
+    )
+
+    # 16 · Two portrait screenshots need a mobile-specific composition.
+    page_background(canvas, 16, "Responsive delivery")
+    title(canvas, "Mobile overview and map", "The same decision product remains usable on a 390 × 844 viewport.")
+    draw_screenshot(canvas, "dashboard-mobile-de-v4.png", 48, 58, 216, 430, anchor="top")
+    draw_screenshot(canvas, "dashboard-mobile-map-de-v4.png", 282, 58, 216, 430, anchor="top")
+    rounded_card(canvas, 528, 98, 262, 338)
     canvas.setFillColor(TEAL)
-    canvas.roundRect(384, 377, 140, 28, 14, fill=1, stroke=0)
+    canvas.roundRect(550, 377, 140, 28, 14, fill=1, stroke=0)
     canvas.setFillColor(WHITE)
     canvas.setFont(FONT_BOLD, 9)
-    canvas.drawCentredString(454, 387, "RESPONSIVE PRODUCT")
+    canvas.drawCentredString(620, 387, "RESPONSIVE PRODUCT")
     canvas.setFillColor(INK)
     canvas.setFont(FONT_BOLD, 18)
-    canvas.drawString(384, 344, "A real map on every viewport")
+    canvas.drawString(550, 344, "A real product on mobile")
     y = paragraph(
         canvas,
-        "The mobile layout preserves the complete MapLibre interaction surface without horizontal overflow. "
-        "Touch zoom, pan, clustering, layer controls and the full-Hamburg reset remain available in a readable single-column experience.",
-        384,
+        "The mobile shell preserves the analytical hierarchy and complete MapLibre interaction surface without horizontal overflow. "
+        "Touch zoom, pan, clustering, layers and the full-Hamburg reset remain available in a readable single-column experience.",
+        550,
         318,
-        370,
+        214,
         BODY,
     )
     bullet_list(
@@ -533,19 +572,19 @@ def build_report() -> None:
         [
             "Verified at 390 × 844 pixels",
             "No horizontal document overflow",
-            "Touch zoom and pan stay enabled",
-            "Map controls and layer filters remain reachable",
+            "Compact navigation remains reachable",
+            "Touch map controls stay enabled",
         ],
-        384,
+        550,
         y - 12,
-        350,
+        214,
     )
     paragraph(
         canvas,
-        "Figure 12 — Full Hamburg vector map on the German mobile interface.",
-        384,
+        "Figure 14 — German overview and full Hamburg map on the mobile product shell.",
+        550,
         124,
-        350,
+        214,
         CAPTION,
     )
     canvas.showPage()
