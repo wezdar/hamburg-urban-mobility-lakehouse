@@ -4,15 +4,41 @@ on:
   push:
     branches: [main]
     paths:
+      - ".openai/**"
+      - "app/**"
+      - "build/**"
       - "infra/**"
+      - "observability/**"
+      - "public/**"
+      - "worker/**"
       - "Dockerfile.dashboard"
       - "compose.production.yml"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - "next.config.ts"
+      - "postcss.config.mjs"
+      - "tsconfig.json"
+      - "vite.config.ts"
       - ".github/workflows/cloud-plan.yml"
   pull_request:
     paths:
+      - ".openai/**"
+      - "app/**"
+      - "build/**"
       - "infra/**"
+      - "observability/**"
+      - "public/**"
+      - "worker/**"
       - "Dockerfile.dashboard"
       - "compose.production.yml"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+      - "next.config.ts"
+      - "postcss.config.mjs"
+      - "tsconfig.json"
+      - "vite.config.ts"
       - ".github/workflows/cloud-plan.yml"
   workflow_dispatch:
 
